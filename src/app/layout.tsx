@@ -21,9 +21,7 @@ export default function RootLayout({
 }>) {
   return (
 		<html lang='en'>
-			<body
-				className={`${roboto.className} bg-[#F1F2F6] overflow-x-hidden h-[2000px]`}
-			>
+			<body className={`${roboto.className} bg-[#f3f3f5] overflow-x-hidden`}>
 				<Header navItems={navItems} navButtons={navButtons} />
 				{children}
 			</body>

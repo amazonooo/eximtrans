@@ -13,6 +13,7 @@ import Image from 'next/image'
 import { usePathname, useRouter } from 'next/navigation'
 import { CircleUserRound, LogOut, User } from 'lucide-react'
 import { useMediaQuery } from 'react-responsive'
+import MobileNav from '../ui/header/MobileNav'
 
 export const Header = ({
 	navItems,
@@ -207,7 +208,7 @@ export const Header = ({
 				</AnimatePresence>
 			)}
 			{isMobile && (
-				<div></div>
+				<MobileNav />
 			)}
 		</header>
 	)
