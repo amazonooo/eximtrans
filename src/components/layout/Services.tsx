@@ -1,19 +1,24 @@
 'use client'
 
 import Aos from 'aos'
-import { FC, useEffect } from 'react'
+import gsap from 'gsap'
+import { ScrollTrigger } from 'gsap/ScrollTrigger'
+import { FC, useEffect, useLayoutEffect } from 'react'
 
 const Services: FC = () => {
-  useEffect(() => {
-    Aos.init()
+	gsap.registerPlugin(ScrollTrigger)
+
+  useLayoutEffect(() => {
+    gsap.from('.anim', { opacity: 0, x: -500, duration: 2 })
   }, [])
 
   return (
-    <section className='h-[1000px]'>
-      <h1 data-aos='fade-left' className='text-center text-2xl md:text-4xl'>Наши услуги</h1>
-      
-    </section>
-  )
+		<section className='relative md:px-36 lg:px-44'>
+			<h1 className='h-full text-center text-2xl md:text-4xl text-black'>
+				Наши услуги
+			</h1>
+		</section>
+	)
 }
 
 export default Services

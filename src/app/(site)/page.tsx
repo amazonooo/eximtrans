@@ -14,7 +14,7 @@ export default function Home() {
   }, [])
 
   return (
-    <main className=" h-full w-full flex flex-col overflow-clip px-5 sm:px-10">
+    <main className="w-full h-full flex flex-col overflow-clip px-5 sm:px-10">
       <Hero />
       <Services />
     </main>

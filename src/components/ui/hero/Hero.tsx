@@ -5,6 +5,8 @@ import Aos from 'aos'
 import 'aos/dist/aos.css'
 import { motion } from 'framer-motion'
 import { slideInFromLeft } from '@/utils/motion'
+import gsap from 'gsap'
+import { ScrollTrigger } from 'gsap/ScrollTrigger'
 
 const Hero: FC = () => {
   useEffect(() => {
