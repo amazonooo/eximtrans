@@ -4,7 +4,6 @@ import "./globals.css";
 import { Header } from '@/components/layout/Header'
 import { navButtons, navItems } from '@/components/ui/header/navItems'
 
-
 const roboto = Roboto({
   subsets: ["latin"],
   weight: '700'
