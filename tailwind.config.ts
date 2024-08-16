@@ -1,5 +1,11 @@
 import type { Config } from "tailwindcss";
 
+const colors = require('tailwindcss/colors')
+
+const {
+	default: flattenColorPalette,
+} = require('tailwindcss/lib/util/flattenColorPalette')
+
 const config: Config = {
 	content: [
 		'./src/pages/**/*.{js,ts,jsx,tsx,mdx}',
@@ -33,14 +39,32 @@ const config: Config = {
 					'0%': { transform: 'rotate(0deg)' },
 					'100%': { transform: 'rotate(360deg)' },
 				},
+				scroll: {
+					to: {
+						transform: 'translate(calc(-50% - 0.5rem))',
+					},
+				},
 			},
 			animation: {
 				'slide-up': 'slide-up 0.3s ease',
 				'slide-down': 'slide-down 0.3s ease',
 				spin: 'spin 20s linear infinite ',
+				scroll:
+					'scroll var(--animation-duration, 40s) var(--animation-direction, forwards) linear infinite',
 			},
 		},
 	},
-	plugins: [],
+	plugins: [addVariablesForColors],
+}
+
+function addVariablesForColors({ addBase, theme }: any) {
+	let allColors = flattenColorPalette(theme('colors'))
+	let newVars = Object.fromEntries(
+		Object.entries(allColors).map(([key, val]) => [`--${key}`, val])
+	)
+
+	addBase({
+		':root': newVars,
+	})
 }
 export default config;

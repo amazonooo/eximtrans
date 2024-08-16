@@ -53,7 +53,7 @@ export default function GlobeComponent() {
 				))}
 			</div>
 
-			<div className='relative w-96 h-96'>
+			<div className='relative w-[900px] h-[900px]'>
 				<img
 					src='/planet.jpg'
 					alt='Planet'
@@ -61,9 +61,9 @@ export default function GlobeComponent() {
 				/>
 
 				{/* Rotating Circle */}
-				<div className='absolute inset-0 flex items-center justify-center'>
+				{/* <div className='absolute inset-0 flex items-center justify-center'>
 					<div className='w-[130%] h-[130%] border-t-4 border-gray-300 rounded-full animate-spin'></div>
-				</div>
+				</div> */}
 
 				{/* City Points */}
 				{cities.map((city, index) => (

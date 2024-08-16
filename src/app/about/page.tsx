@@ -1,5 +1,8 @@
 import AboutHero from './components/AboutHero'
 import AboutTop from './components/AboutTop'
+import Advantages from './components/Advantages'
+import { InfiniteMovingCardsDemo } from './components/Clients'
+import Logistic from './components/Logistic'
 import Mission from './components/Mission'
 
 export default function Aboutpage() {
@@ -11,6 +14,9 @@ export default function Aboutpage() {
         <AboutHero />
         <AboutTop />
 				<Mission />
+				<Advantages />
+				<Logistic />
+				<InfiniteMovingCardsDemo />
 			</div>
 		</main>
 	)

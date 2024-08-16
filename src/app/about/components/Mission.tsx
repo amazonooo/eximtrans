@@ -45,7 +45,7 @@ const Mission: FC = () => {
 
   return (
 		<section className='flex flex-col items-center justify-center mb-24 md:mb-36 px-5 sm:px-10 md:px-15 lg:px-28 xl:px-[182.5px]'>
-			<div className='pt-12 md:pt-16'>
+			<div className=''>
 				<div className='flex flex-col md:flex-row items-center gap-x-6'>
 					<div className='mission-top'>
 						<h1 className=' text-2xl md:text-4xl text-black font-semibold mb-6'>
@@ -62,7 +62,7 @@ const Mission: FC = () => {
 						</p>
 					</div>
 					<div className='mission-top-box'>
-						<Image src={'/gruz-per.png'} alt='img' width={300} height={300} />
+						<Image src={'/train-1.jpg'} alt='img' width={400} height={400} className='rounded-lg' />
 					</div>
 				</div>
 			</div>

@@ -1,22 +1,30 @@
-export const advantages = [
+import { CalendarDays, ChevronsUp, LucideIcon, Smile, ThumbsUp } from 'lucide-react'
+
+interface IAdvantagesData {
+	id: string
+	IconComponent: LucideIcon
+	text: string
+}
+
+export const advantagesData: IAdvantagesData[] = [
 	{
 		id: '1',
-		icon: '',
+		IconComponent: CalendarDays,
 		text: 'Долгосрочные партнерские отношения с клиентами',
 	},
 	{
 		id: '2',
-		icon: '',
+		IconComponent: ChevronsUp,
 		text: 'Ориентация на непрерывное развитие и рост',
 	},
 	{
 		id: '3',
-		icon: '',
+		IconComponent: ThumbsUp,
 		text: 'Лучшие качество предоставляемых услуг',
 	},
 	{
 		id: '4',
-		icon: '',
+		IconComponent: Smile,
 		text: 'Индивидуальный подход к каждому клиенту',
 	},
 ]
