@@ -53,7 +53,7 @@ export default function GlobeComponent() {
 				))}
 			</div>
 
-			<div className='relative w-96 h-96'>
+			<div className='relative w-24 h-24'>
 				<img
 					src='/path-to-your-planet-image.png'
 					alt='Planet'
