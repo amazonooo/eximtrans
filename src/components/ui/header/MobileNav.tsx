@@ -14,25 +14,23 @@ const MobileNav: FC = () => {
 				<div className='text-2xl'>LOGO</div>
 				<div
 					onClick={() => setIsOpen(!isOpen)}
-					className='relative bg-[#930D40] rounded-full cursor-pointer w-14 h-14 flex items-center justify-center group'
+					className='flex items-center justify-center group bg-[#930D40] rounded-full w-12 h-12'
 					onMouseEnter={() => setIsHovered(true)}
 					onMouseLeave={() => setIsHovered(false)}
 				>
 					{/* {isOpen ? <X size={35} /> : <Menu size={35} />} */}
-					<div className='flex items-center justify-center flex-col'>
+					<div className='flex flex-col items-center justify-center'>
 						<div
-							className={`-translate-y-1 w-7 h-0.5 bg-white group-hover:-translate-y-0 group-hover:rotate-45 transition-all duration-400 ${
-								isOpen ? 'rotate-45 -translate-y-0' : ''
+							className={`-translate-y-[1.5px] w-7 h-0.5 bg-white transition-all duration-400 ${
+								isOpen ? 'rotate-45 translate-y-[1.5px]' : ''
 							}`}
 						></div>
 						<div
-							className={`w-7 h-0.5 bg-white group-hover:invisible ${
-								isOpen ? 'invisible' : 'visible'
-							}`}
+							className={`w-7 h-0.5 bg-white transition-all duration-400 ${isOpen ? 'hidden' : ''}`}
 						></div>
 						<div
-							className={`translate-y-1 w-7 h-0.5 bg-white group-hover:translate-y-0 group-hover:-rotate-45 transition-all duration-400 ${
-								isOpen ? 'translate-y-0 -rotate-45' : ''
+							className={`translate-y-[1.5px] w-7 h-0.5 bg-white transition-all duration-400 ${
+								isOpen ? '-rotate-45 -translate-y-[1.5px]' : ''
 							}`}
 						></div>
 					</div>

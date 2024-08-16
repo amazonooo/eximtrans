@@ -30,7 +30,7 @@ const CompDesc: FC = () => {
 		gsap.from('.sect-box', {
 			opacity: 0,
 			x: -300,
-			duration: 1.7,
+			duration: 1.5,
 			scrollTrigger: {
 				trigger: '.sect-box',
 			},
@@ -38,7 +38,7 @@ const CompDesc: FC = () => {
 		gsap.to('.sect-box', {
 			opacity: 1,
 			x: 0,
-			duration: 1.7,
+			duration: 1.5,
 			scrollTrigger: {
 				trigger: '.sect-box',
 			},
@@ -46,7 +46,7 @@ const CompDesc: FC = () => {
 	}, [])
 
 	return (
-		<section className='flex flex-col items-center justify-center mb-24 md:px-15 lg:px-28 xl:px-[182.5px] '>
+		<section className='flex flex-col items-center justify-center mb-36 md:px-15 lg:px-28 xl:px-[182.5px]'>
 			<Heading
 				text='Крупнейший частный оператор грузовых железнодорожных перевозок России'
 				className='sect max-w-[1000px]'

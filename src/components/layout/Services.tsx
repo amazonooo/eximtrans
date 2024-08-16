@@ -43,7 +43,7 @@ const Services: FC = () => {
   }, [])
 
   return (
-		<section className='flex flex-col items-center justify-center mb-24'>
+		<section className='flex flex-col items-center justify-center mb-36'>
 			<Heading text='Наши услуги' className='anim' />
 			<div className='anim pt-12 md:pt-16'>
 				<div className='grid grid-cols-1 md:grid-cols-2 gap-x-3 gap-y-4'>

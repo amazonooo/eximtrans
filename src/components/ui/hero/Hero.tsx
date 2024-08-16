@@ -18,7 +18,7 @@ const Hero: FC = () => {
 		<motion.section
 			initial='hidden'
 			animate='visible'
-			className='md:px-36 lg:px-44 mt-16 lg:mt-40 w-full mb-24'
+			className='md:px-36 lg:px-44 mt-16 lg:mt-40 w-full mb-36'
 		>
 			<motion.div
 				variants={slideInFromLeft(0.8)}

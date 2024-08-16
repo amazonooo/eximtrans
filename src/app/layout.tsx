@@ -3,6 +3,7 @@ import { Inter, Open_Sans, Poppins, Roboto } from "next/font/google";
 import "./globals.css";
 import { Header } from '@/components/layout/Header'
 import { navButtons, navItems } from '@/components/ui/header/navItems'
+import Footer from '@/components/layout/Footer'
 
 // const openSans = Open_Sans({
 //   subsets: ["latin"],
@@ -24,6 +25,7 @@ export default function RootLayout({
 			<body className={`bg-[#F1F2F6] overflow-x-hidden`}>
 				<Header navItems={navItems} navButtons={navButtons} />
 				{children}
+				<Footer />
 			</body>
 		</html>
 	)

@@ -4,6 +4,7 @@ import Services from '@/components/layout/Services'
 import CompDesc from '@/components/layout/CompDesc'
 import Hero from '@/components/ui/hero/Hero'
 import { useEffect } from 'react'
+import GlobeComponent from '@/components/layout/Geography'
 
 export default function Home() {
   useEffect(() => {
@@ -19,6 +20,7 @@ export default function Home() {
       <Hero />
       <Services />
       <CompDesc />
+      <GlobeComponent />
     </main>
   );
 }
