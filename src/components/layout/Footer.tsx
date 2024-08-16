@@ -6,7 +6,7 @@ import FooterInfo from '../ui/footer/FooterInfo'
 
 const Footer = () => {
 	return (
-		<footer className='pt-8 pb-3 px-5 sm:px-10'>
+		<footer className='pt-8 pb-3 px-5 sm:px-10 border-t border-t-white/90 shadow-2xl'>
 			<div className='container mx-auto grid grid-cols-1 md:grid-cols-3 gap-8'>
 				<div className='flex flex-col items-start'>
 					<FooterLogo />
@@ -21,7 +21,7 @@ const Footer = () => {
 							{ href: '#', text: 'Фирменный стиль', isGray: true },
 							{ href: '#', text: 'Медиабанк'},
 							{ href: '#', text: 'ПГК Диджитал' },
-							{ href: '#', text: 'Устойчивое развитие' },
+							{ href: '/contacts', text: 'Контакты' },
 						]}
 					/>
 				</div>

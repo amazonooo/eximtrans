@@ -34,7 +34,7 @@ export default function GlobeComponent() {
 	const [selectedCity, setSelectedCity] = useState(cities[0])
 
 	return (
-		<section className='relative flex items-center flex-col justify-center mb-24 md:mb-36'>
+		<section className='relative flex items-center flex-col justify-center mt-16 lg:mt-36 w-full mb-24 md:mb-36'>
 			<Heading text='Наши офисы' className='text-center' />
 			<div className='flex mb-4 space-y-2 pt-12 md:pt-16'>
 				{cities.map((city, index) => (
@@ -54,11 +54,7 @@ export default function GlobeComponent() {
 			</div>
 
 			<div className='relative w-[900px] h-[900px]'>
-				<img
-					src='/planet.jpg'
-					alt='Planet'
-					className='w-full h-full'
-				/>
+				<img src='/planet.jpg' alt='Planet' className='w-full h-full' />
 
 				{/* Rotating Circle */}
 				{/* <div className='absolute inset-0 flex items-center justify-center'>

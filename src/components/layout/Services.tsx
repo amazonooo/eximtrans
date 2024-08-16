@@ -6,6 +6,7 @@ import { FC, useEffect, useLayoutEffect } from 'react'
 import { servicesData } from '../ui/services/servicesData'
 import ServicesCard from '../ui/services/ServicesCard'
 import Heading from '../ui/heading/Heading'
+import Link from 'next/link'
 
 const Services: FC = () => {
 	// gsap.registerPlugin(ScrollTrigger)
@@ -58,9 +59,9 @@ const Services: FC = () => {
 						/>
 					))}
 					<div className='mt-10 flex items-center justify-center font-medium'>
-						<button className='bg-white text-center px-8 py-5 rounded-xl hover:bg-fuchsia-950 hover:text-white transition-colors duration-500 border border-fuchsia-950 hover:border-transparent'>
+						<Link href={'/services'} className='bg-white cursor-pointer text-center px-8 py-5 rounded-xl hover:bg-fuchsia-950 hover:text-white transition-colors duration-500 border border-fuchsia-950 hover:border-transparent'>
 							Все услуги
-						</button>
+						</Link>
 					</div>
 				</div>
 			</div>
