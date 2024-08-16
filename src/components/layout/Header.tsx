@@ -137,7 +137,7 @@ export const Header = ({
 										<span className='block sm:hidden'>{navItem.icon}</span>
 										{/* add !cursor-pointer */}
 										{/* remove hidden sm:block for the mobile responsive */}
-										<span className={`xl:text-lg font-bold text-neutral-900 hover:text-[#930d4bd5] transition-colors duration-300 lg:text-sm !cursor-pointer ${pathname === navItem.link ? 'text-[#930d4bd5]' : ''}`}>
+										<span className={`xl:text-lg font-bold  hover:text-[#930d4bd5] transition-colors duration-300 lg:text-sm !cursor-pointer ${pathname === navItem.link ? 'text-[#930d4bd5]' : 'text-neutral-900'}`}>
 											{navItem.name}
 										</span>
 									</Link>

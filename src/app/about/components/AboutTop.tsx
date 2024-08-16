@@ -44,8 +44,8 @@ const AboutTop: FC = () => {
 	// }, [])
   
   return (
-		<section className='flex flex-col items-center justify-center mb-36 md:px-15 lg:px-28 xl:px-[182.5px]'>
-			<div className='grid grid-cols-1 md:grid-cols-2 gap-y-6 mx-auto px-5 sm:px-10'>
+		<section className='flex flex-col items-center justify-center mb-24 md:mb-36 px-5 sm:px-10 md:px-15 lg:px-28 xl:px-[182.5px]'>
+			<div className='grid grid-cols-1 md:grid-cols-2 gap-y-6'>
 				<div className='about-top'>
 					<Image src={'/logo.png'} alt='logo' width={200} height={200} />
 				</div>

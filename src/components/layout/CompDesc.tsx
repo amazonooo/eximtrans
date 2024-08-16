@@ -46,7 +46,7 @@ const CompDesc: FC = () => {
 	// }, [])
 
 	return (
-		<section className='flex flex-col items-center justify-center mb-36 md:px-15 lg:px-28 xl:px-[182.5px]'>
+		<section className='flex flex-col items-center justify-center mb-24 md:mb-36 md:px-15 lg:px-28 xl:px-[182.5px]'>
 			<Heading
 				text='Крупнейший частный оператор грузовых железнодорожных перевозок России'
 				className='sect max-w-[1000px]'

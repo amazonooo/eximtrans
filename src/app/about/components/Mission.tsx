@@ -44,7 +44,7 @@ const Mission: FC = () => {
 	// }, [])
 
   return (
-		<section className='flex flex-col items-center justify-center mb-36 md:px-15 lg:px-28 xl:px-[182.5px]'>
+		<section className='flex flex-col items-center justify-center mb-24 md:mb-36 px-5 sm:px-10 md:px-15 lg:px-28 xl:px-[182.5px]'>
 			<div className='pt-12 md:pt-16'>
 				<div className='flex flex-col md:flex-row items-center gap-x-6'>
 					<div className='mission-top'>

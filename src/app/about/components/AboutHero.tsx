@@ -10,7 +10,7 @@ const AboutHero: FC = () => {
 		<motion.section
 			initial='hidden'
 			animate='visible'
-			className='flex items-center justify-center mt-16 lg:mt-36 w-full mb-36'
+			className='flex items-center justify-center mt-16 lg:mt-36 w-full mb-24 md:mb-36'
 		>
       <motion.div style={{
         backgroundImage: 'url(/about-hero.jpg)'

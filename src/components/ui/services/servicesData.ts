@@ -12,34 +12,35 @@ export const servicesData = [
 		title: 'Грузовые перевозки',
 		image: '/gruz-per.png',
 		href: '/',
-		anim: '1'
+		anim: '1',
 	},
 	{
 		id: '2',
 		title: 'Железнодорожные перевозки',
 		image: '/zhel-per.png',
 		href: '/',
-		anim: '2'
+		anim: '2',
 	},
 	{
 		id: '3',
-		title: 'Аренда вагонов',
-		image: '/obmen.jpg',
+		title: 'Продажа запчастей и металлолома',
+		image: '/shesterenki.jpg',
 		href: '/',
-		anim: '3'
+		anim: '3',
 	},
 	{
 		id: '4',
 		title: 'Ремонт вагонов',
 		image: '/chuvak.png',
 		href: '/',
-		anim: '4'
+		anim: '4',
 	},
+
 	{
 		id: '5',
-		title: 'Продажа запчастей и металлолома',
-		image: '/shesterenki.jpg',
+		title: 'Аренда вагонов',
+		image: '/obmen.jpg',
 		href: '/',
-		anim: '5'
+		anim: '5',
 	},
 ]
