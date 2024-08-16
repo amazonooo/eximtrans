@@ -1,13 +1,13 @@
 import type { Metadata } from "next";
-import { Inter, Roboto } from "next/font/google";
+import { Inter, Open_Sans, Poppins, Roboto } from "next/font/google";
 import "./globals.css";
 import { Header } from '@/components/layout/Header'
 import { navButtons, navItems } from '@/components/ui/header/navItems'
 
-const roboto = Roboto({
-  subsets: ["latin"],
-  weight: '700'
-});
+// const openSans = Open_Sans({
+//   subsets: ["latin"],
+//   weight: '700'
+// });
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -21,7 +21,7 @@ export default function RootLayout({
 }>) {
   return (
 		<html lang='en'>
-			<body className={`${roboto.className} bg-[#f3f3f5] overflow-x-hidden`}>
+			<body className={`bg-[#F1F2F6] overflow-x-hidden`}>
 				<Header navItems={navItems} navButtons={navButtons} />
 				{children}
 			</body>

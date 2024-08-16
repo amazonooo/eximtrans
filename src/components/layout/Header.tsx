@@ -114,9 +114,11 @@ export const Header = ({
 					>
 						<ul className='flex justify-between'>
 							<div className='text-2xl font-bold Welcome-text'>
-								<Link href={'/'}>Infinitum</Link>
+								<Link href={'/'}>
+									<Image src={'/logo.png'} alt='logo' width={150} height={150} />
+								</Link>
 							</div>
-							<li className='flex justify-between lg:gap-x-4 xl:gap-x-6 font-semibold'>
+							<li className='flex justify-between lg:gap-x-4 xl:gap-x-12 font-semibold'>
 								{navItems.map((navItem: any, idx: number) => (
 									<Link
 										key={`link=${idx}`}
@@ -128,7 +130,7 @@ export const Header = ({
 										<span className='block sm:hidden'>{navItem.icon}</span>
 										{/* add !cursor-pointer */}
 										{/* remove hidden sm:block for the mobile responsive */}
-										<span className='xl:text-base font-medium text-neutral-700 hover:text-neutral-700/70 transition-colors duration-300 lg:text-sm !cursor-pointer'>
+										<span className='xl:text-lg font-medium text-neutral-700 hover:text-fuchsia-950 transition-colors duration-300 lg:text-sm !cursor-pointer'>
 											{navItem.name}
 										</span>
 									</Link>
