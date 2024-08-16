@@ -5,26 +5,26 @@ import { ScrollTrigger } from 'gsap/ScrollTrigger'
 import { FC, useLayoutEffect } from 'react'
 
 const FooterInfo: FC = () => {
-  gsap.registerPlugin(ScrollTrigger)
+  // gsap.registerPlugin(ScrollTrigger)
 
-	useLayoutEffect(() => {
-		gsap.from('.footer-info', {
-			opacity: 0,
-			x: -200,
-			duration: 1,
-			scrollTrigger: {
-				trigger: '.footer-info',
-			},
-		})
-		gsap.to('.footer-info', {
-			opacity: 1,
-			x: 0,
-			duration: 1,
-			scrollTrigger: {
-				trigger: '.footer-info',
-			},
-		})
-	}, [])
+	// useLayoutEffect(() => {
+	// 	gsap.from('.footer-info', {
+	// 		opacity: 0,
+	// 		x: -200,
+	// 		duration: 1,
+	// 		scrollTrigger: {
+	// 			trigger: '.footer-info',
+	// 		},
+	// 	})
+	// 	gsap.to('.footer-info', {
+	// 		opacity: 1,
+	// 		x: 0,
+	// 		duration: 1,
+	// 		scrollTrigger: {
+	// 			trigger: '.footer-info',
+	// 		},
+	// 	})
+	// }, [])
 
   return (
 		<p className='footer-info'>

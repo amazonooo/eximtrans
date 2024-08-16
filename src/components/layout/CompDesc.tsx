@@ -8,42 +8,42 @@ import { compData } from '../ui/comp-desc/compData'
 import CompDescCard from '../ui/comp-desc/CompDescCard'
 
 const CompDesc: FC = () => {
-	gsap.registerPlugin(ScrollTrigger)
+	// gsap.registerPlugin(ScrollTrigger)
 
-	useLayoutEffect(() => {
-		gsap.from('.sect', {
-			opacity: 0,
-			x: -1000,
-			duration: 1.5,
-			scrollTrigger: {
-				trigger: '.sect',
-			},
-		})
-		gsap.to('.sect', {
-			opacity: 1,
-			x: 0,
-			duration: 1.5,
-			scrollTrigger: {
-				trigger: '.sect',
-			},
-		})
-		gsap.from('.sect-box', {
-			opacity: 0,
-			x: -300,
-			duration: 1.5,
-			scrollTrigger: {
-				trigger: '.sect-box',
-			},
-		})
-		gsap.to('.sect-box', {
-			opacity: 1,
-			x: 0,
-			duration: 1.5,
-			scrollTrigger: {
-				trigger: '.sect-box',
-			},
-		})
-	}, [])
+	// useLayoutEffect(() => {
+	// 	gsap.from('.sect', {
+	// 		opacity: 0,
+	// 		x: -1000,
+	// 		duration: 1.5,
+	// 		scrollTrigger: {
+	// 			trigger: '.sect',
+	// 		},
+	// 	})
+	// 	gsap.to('.sect', {
+	// 		opacity: 1,
+	// 		x: 0,
+	// 		duration: 1.5,
+	// 		scrollTrigger: {
+	// 			trigger: '.sect',
+	// 		},
+	// 	})
+	// 	gsap.from('.sect-box', {
+	// 		opacity: 0,
+	// 		x: -300,
+	// 		duration: 1.5,
+	// 		scrollTrigger: {
+	// 			trigger: '.sect-box',
+	// 		},
+	// 	})
+	// 	gsap.to('.sect-box', {
+	// 		opacity: 1,
+	// 		x: 0,
+	// 		duration: 1.5,
+	// 		scrollTrigger: {
+	// 			trigger: '.sect-box',
+	// 		},
+	// 	})
+	// }, [])
 
 	return (
 		<section className='flex flex-col items-center justify-center mb-36 md:px-15 lg:px-28 xl:px-[182.5px]'>

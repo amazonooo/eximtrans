@@ -5,26 +5,26 @@ import { ScrollTrigger } from 'gsap/ScrollTrigger'
 import { useLayoutEffect } from 'react'
 
 const FooterContact = () => {
-	gsap.registerPlugin(ScrollTrigger)
+	// gsap.registerPlugin(ScrollTrigger)
 
-	useLayoutEffect(() => {
-		gsap.from('.footer-con', {
-			opacity: 0,
-			x: 500,
-			duration: 1,
-			scrollTrigger: {
-				trigger: '.footer-con',
-			},
-		})
-		gsap.to('.footer-con', {
-			opacity: 1,
-			x: 0,
-			duration: 1,
-			scrollTrigger: {
-				trigger: '.footer-con',
-			},
-		})
-	}, [])
+	// useLayoutEffect(() => {
+	// 	gsap.from('.footer-con', {
+	// 		opacity: 0,
+	// 		x: 500,
+	// 		duration: 1,
+	// 		scrollTrigger: {
+	// 			trigger: '.footer-con',
+	// 		},
+	// 	})
+	// 	gsap.to('.footer-con', {
+	// 		opacity: 1,
+	// 		x: 0,
+	// 		duration: 1,
+	// 		scrollTrigger: {
+	// 			trigger: '.footer-con',
+	// 		},
+	// 	})
+	// }, [])
 
 	return (
 		<div className='footer-con text-center flex flex-col justify-between h-full'>

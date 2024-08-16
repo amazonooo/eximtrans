@@ -8,10 +8,10 @@ const Footer = () => {
 	return (
 		<footer className='pt-8 pb-3 px-5 sm:px-10'>
 			<div className='container mx-auto grid grid-cols-1 md:grid-cols-3 gap-8'>
-				<div className='flex flex-col items-center md:items-start'>
+				<div className='flex flex-col items-start'>
 					<FooterLogo />
 				</div>
-				<div className='flex flex-col items-center'>
+				<div className='flex flex-col items-start md:items-center'>
 					<FooterItems
 						title='О компании'
 						links={[

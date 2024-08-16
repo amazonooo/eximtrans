@@ -16,7 +16,7 @@ export default function Home() {
   }, [])
 
   return (
-    <main className='w-full h-full flex flex-col overflow-clip'>
+    <main className='w-full h-full flex flex-col overflow-clip px-5 sm:px-10'>
       <Hero />
       <Services />
       <CompDesc />

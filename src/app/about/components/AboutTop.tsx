@@ -6,42 +6,42 @@ import Image from 'next/image'
 import { FC, useLayoutEffect } from 'react'
 
 const AboutTop: FC = () => {
-  gsap.registerPlugin(ScrollTrigger)
+  // gsap.registerPlugin(ScrollTrigger)
 
-	useLayoutEffect(() => {
-		gsap.from('.about-top', {
-			opacity: 0,
-			x: -500,
-			duration: 1.5,
-			scrollTrigger: {
-				trigger: '.about-top',
-			},
-		})
-		gsap.to('.about-top', {
-			opacity: 1,
-			x: 0,
-			duration: 1.5,
-			scrollTrigger: {
-				trigger: '.about-top',
-			},
-		})
-		gsap.from('.about-top-box', {
-			opacity: 0,
-			x: 300,
-			duration: 1.5,
-			scrollTrigger: {
-				trigger: '.about-top-box',
-			},
-		})
-		gsap.to('.about-top-box', {
-			opacity: 1,
-			x: 0,
-			duration: 1.5,
-			scrollTrigger: {
-				trigger: '.about-top-box',
-			},
-		})
-	}, [])
+	// useLayoutEffect(() => {
+	// 	gsap.from('.about-top', {
+	// 		opacity: 0,
+	// 		x: -500,
+	// 		duration: 1.5,
+	// 		scrollTrigger: {
+	// 			trigger: '.about-top',
+	// 		},
+	// 	})
+	// 	gsap.to('.about-top', {
+	// 		opacity: 1,
+	// 		x: 0,
+	// 		duration: 1.5,
+	// 		scrollTrigger: {
+	// 			trigger: '.about-top',
+	// 		},
+	// 	})
+	// 	gsap.from('.about-top-box', {
+	// 		opacity: 0,
+	// 		x: 300,
+	// 		duration: 1.5,
+	// 		scrollTrigger: {
+	// 			trigger: '.about-top-box',
+	// 		},
+	// 	})
+	// 	gsap.to('.about-top-box', {
+	// 		opacity: 1,
+	// 		x: 0,
+	// 		duration: 1.5,
+	// 		scrollTrigger: {
+	// 			trigger: '.about-top-box',
+	// 		},
+	// 	})
+	// }, [])
   
   return (
 		<section className='flex flex-col items-center justify-center mb-36 md:px-15 lg:px-28 xl:px-[182.5px]'>

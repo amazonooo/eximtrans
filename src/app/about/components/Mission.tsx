@@ -6,42 +6,42 @@ import Image from 'next/image'
 import { FC, useLayoutEffect } from 'react'
 
 const Mission: FC = () => {
-  gsap.registerPlugin(ScrollTrigger)
+  // gsap.registerPlugin(ScrollTrigger)
 
-	useLayoutEffect(() => {
-		gsap.from('.mission-top', {
-			opacity: 0,
-			x: -500,
-			duration: 1.5,
-			scrollTrigger: {
-				trigger: '.mission-top',
-			},
-		})
-		gsap.to('.mission-top', {
-			opacity: 1,
-			x: 0,
-			duration: 1.5,
-			scrollTrigger: {
-				trigger: '.mission-top',
-			},
-		})
-		gsap.from('.mission-top-box', {
-			opacity: 0,
-			x: 300,
-			duration: 1.5,
-			scrollTrigger: {
-				trigger: '.mission-top-box',
-			},
-		})
-		gsap.to('.mission-top-box', {
-			opacity: 1,
-			x: 0,
-			duration: 1.5,
-			scrollTrigger: {
-				trigger: '.mission-top-box',
-			},
-		})
-	}, [])
+	// useLayoutEffect(() => {
+	// 	gsap.from('.mission-top', {
+	// 		opacity: 0,
+	// 		x: -500,
+	// 		duration: 1.5,
+	// 		scrollTrigger: {
+	// 			trigger: '.mission-top',
+	// 		},
+	// 	})
+	// 	gsap.to('.mission-top', {
+	// 		opacity: 1,
+	// 		x: 0,
+	// 		duration: 1.5,
+	// 		scrollTrigger: {
+	// 			trigger: '.mission-top',
+	// 		},
+	// 	})
+	// 	gsap.from('.mission-top-box', {
+	// 		opacity: 0,
+	// 		x: 300,
+	// 		duration: 1.5,
+	// 		scrollTrigger: {
+	// 			trigger: '.mission-top-box',
+	// 		},
+	// 	})
+	// 	gsap.to('.mission-top-box', {
+	// 		opacity: 1,
+	// 		x: 0,
+	// 		duration: 1.5,
+	// 		scrollTrigger: {
+	// 			trigger: '.mission-top-box',
+	// 		},
+	// 	})
+	// }, [])
 
   return (
 		<section className='flex flex-col items-center justify-center mb-36 md:px-15 lg:px-28 xl:px-[182.5px]'>

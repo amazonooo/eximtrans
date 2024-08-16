@@ -11,42 +11,42 @@ interface FooterItemProps {
 }
 
 const FooterItems = ({ title, links }: FooterItemProps) => {
-	gsap.registerPlugin(ScrollTrigger)
+	// gsap.registerPlugin(ScrollTrigger)
 
-	useLayoutEffect(() => {
-		gsap.from('.footer', {
-			opacity: 0,
-			x: -500,
-			duration: 1.5,
-			scrollTrigger: {
-				trigger: '.footer',
-			},
-		})
-		gsap.to('.footer', {
-			opacity: 1,
-			x: 0,
-			duration: 1.5,
-			scrollTrigger: {
-				trigger: '.footer',
-			},
-		})
-		gsap.from('.footer-in', {
-			opacity: 0,
-			x: -200,
-			duration: 1,
-			scrollTrigger: {
-				trigger: '.footer-in',
-			},
-		})
-		gsap.to('.footer-in', {
-			opacity: 1,
-			x: 0,
-			duration: 1,
-			scrollTrigger: {
-				trigger: '.footer-in',
-			},
-		})
-	}, [])
+	// useLayoutEffect(() => {
+	// 	gsap.from('.footer', {
+	// 		opacity: 0,
+	// 		x: -500,
+	// 		duration: 1.5,
+	// 		scrollTrigger: {
+	// 			trigger: '.footer',
+	// 		},
+	// 	})
+	// 	gsap.to('.footer', {
+	// 		opacity: 1,
+	// 		x: 0,
+	// 		duration: 1.5,
+	// 		scrollTrigger: {
+	// 			trigger: '.footer',
+	// 		},
+	// 	})
+	// 	gsap.from('.footer-in', {
+	// 		opacity: 0,
+	// 		x: -200,
+	// 		duration: 1,
+	// 		scrollTrigger: {
+	// 			trigger: '.footer-in',
+	// 		},
+	// 	})
+	// 	gsap.to('.footer-in', {
+	// 		opacity: 1,
+	// 		x: 0,
+	// 		duration: 1,
+	// 		scrollTrigger: {
+	// 			trigger: '.footer-in',
+	// 		},
+	// 	})
+	// }, [])
 
 	return (
 		<div className='footer-in'>

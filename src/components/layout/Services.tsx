@@ -8,39 +8,39 @@ import ServicesCard from '../ui/services/ServicesCard'
 import Heading from '../ui/heading/Heading'
 
 const Services: FC = () => {
-	gsap.registerPlugin(ScrollTrigger)
+	// gsap.registerPlugin(ScrollTrigger)
 
-  useLayoutEffect(() => {
-    gsap.from('.anim', { opacity: 0, x: -500, duration: 1.5,
-			scrollTrigger: {
-				trigger: '.anim',
-			}
-		 })
-		 gsap.to('.anim', {
-				opacity: 1,
-				x: 0,
-				duration: 1.5,
-				scrollTrigger: {
-					trigger: '.anim',
-				},
-			})
-			gsap.from('.box', {
-				opacity: 0,
-				x: -500,
-				duration: 1.5,
-				scrollTrigger: {
-					trigger: '.box',
-				},
-			})
-			gsap.to('.box', {
-				opacity: 1,
-				x: 0,
-				duration: 1.5,
-				scrollTrigger: {
-					trigger: '.box',
-				},
-			})
-  }, [])
+  // useLayoutEffect(() => {
+  //   gsap.from('.anim', { opacity: 0, x: -500, duration: 1.5,
+	// 		scrollTrigger: {
+	// 			trigger: '.anim',
+	// 		}
+	// 	 })
+	// 	 gsap.to('.anim', {
+	// 			opacity: 1,
+	// 			x: 0,
+	// 			duration: 1.5,
+	// 			scrollTrigger: {
+	// 				trigger: '.anim',
+	// 			},
+	// 		})
+	// 		gsap.from('.box', {
+	// 			opacity: 0,
+	// 			x: -500,
+	// 			duration: 1.5,
+	// 			scrollTrigger: {
+	// 				trigger: '.box',
+	// 			},
+	// 		})
+	// 		gsap.to('.box', {
+	// 			opacity: 1,
+	// 			x: 0,
+	// 			duration: 1.5,
+	// 			scrollTrigger: {
+	// 				trigger: '.box',
+	// 			},
+	// 		})
+  // }, [])
 
   return (
 		<section className='flex flex-col items-center justify-center mb-36'>
