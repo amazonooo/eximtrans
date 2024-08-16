@@ -11,7 +11,7 @@ import Link from 'next/link'
 import { cn } from '@/utils/cn'
 import Image from 'next/image'
 import { usePathname, useRouter } from 'next/navigation'
-import { CircleUserRound, LogOut, User } from 'lucide-react'
+import { CircleUserRound, LogOut, MenuIcon, User, User2 } from 'lucide-react'
 import { useMediaQuery } from 'react-responsive'
 import MobileNav from '../ui/header/MobileNav'
 
@@ -115,7 +115,12 @@ export const Header = ({
 						<ul className='flex justify-between'>
 							<div className='text-2xl font-bold Welcome-text'>
 								<Link href={'/'}>
-									<Image src={'/logo.png'} alt='logo' width={150} height={150} />
+									<Image
+										src={'/logo.png'}
+										alt='logo'
+										width={150}
+										height={150}
+									/>
 								</Link>
 							</div>
 							<li className='flex justify-between lg:gap-x-4 xl:gap-x-12 font-semibold'>
@@ -130,7 +135,7 @@ export const Header = ({
 										<span className='block sm:hidden'>{navItem.icon}</span>
 										{/* add !cursor-pointer */}
 										{/* remove hidden sm:block for the mobile responsive */}
-										<span className='xl:text-lg font-medium text-neutral-700 hover:text-fuchsia-950 transition-colors duration-300 lg:text-sm !cursor-pointer'>
+										<span className='xl:text-lg font-medium text-neutral-700 hover:text-[#930d4bd5] transition-colors duration-300 lg:text-sm !cursor-pointer'>
 											{navItem.name}
 										</span>
 									</Link>
@@ -138,80 +143,18 @@ export const Header = ({
 							</li>
 							<div className='flex justify-between items-center lg:gap-x-4 xl:gap-x-6'>
 								<Link
-									className={cn(
-										'relative dark:text-neutral-50 items-center  flex space-x-1 text-neutral-600 dark:hover:text-neutral-400 hover:text-neutral-700'
-									)}
+									className={cn('relative items-center  flex space-x-1')}
 									href={'/'}
 								>
-									<Image
-										src={'/discord.png'}
-										alt='logo'
-										width={22}
-										height={22}
-									/>
+									<User2 />
 								</Link>
-								<div
-									onClick={() => setDropdownOpen(!dropdownOpen)}
-									className={cn('relative items-center flex')}
-								>
-									<User
-										className={`cursor-pointer ${
-											dropdownOpen ? 'text-[#cbacf9]' : 'text-neutral-50'
-										}`}
-									/>
-									<div
-										className={`absolute right-0 top-[3.22rem] border border-[#cbacf9]/50 shadow-[0px_2px_3px_-1px_rgba(0,0,0,0.1),0px_1px_0px_0px_rgba(25,28,33,0.02),0px_0px_0px_1px_rgba(25,28,33,0.08)] bg-[#161616] rounded-lg text-base w-52 opacity-0 transition-all duration-300 ${
-											dropdownOpen ? 'opacity-100' : ''
-										}`}
-									>
-										<div className='p-4 flex flex-col gap-y-4'>
-											<Link
-												href={'/register'}
-												className='relative inline-flex transition-opacity border-none outline-none bg-transparent p-0 whitespace-nowrap group items-center'
-											>
-												{/* <CircleUser
-												size={15}
-												className='absolute opacity-0 transition-all duration-300 group-hover:opacity-100'
-											/> */}
-												<span className='relative transition-all duration-300 after:content-[""] after:absolute after:top-[105%] after:h-[1.5px] after:left-0 after:w-0 after:transition-all after:duration-300 after:bg-white group-hover:opacity-100 visible group-hover:after:w-[100%]'>
-													Личный кабинет
-												</span>
-											</Link>
-											<Link
-												href={'/profile'}
-												className='relative inline-flex transition-opacity border-none outline-none bg-transparent p-0 whitespace-nowrap group items-center'
-											>
-												<CircleUserRound
-													size={15}
-													className='absolute opacity-0 transition-all duration-300 group-hover:opacity-100'
-												/>
-												<span className='relative transition-all duration-300 after:content-[""] after:absolute after:top-[105%] after:h-[1.5px] after:left-0 after:w-0 after:transition-all after:duration-300 after:bg-white group-hover:opacity-100 visible group-hover:after:w-[100%] group-hover:ml-5'>
-													Профиль
-												</span>
-											</Link>
-											<Link
-												href={'/'}
-												className='relative inline-flex transition-opacity border-none outline-none bg-transparent p-0 whitespace-nowrap group items-center'
-											>
-												<LogOut
-													size={15}
-													className='absolute opacity-0 transition-all duration-300 group-hover:opacity-100'
-												/>
-												<span className='relative transition-all duration-300 after:content-[""] after:absolute after:top-[105%] after:h-[1.5px] after:left-0 after:w-0 after:transition-all after:duration-300 after:bg-white group-hover:opacity-100 visible group-hover:after:w-[100%] group-hover:ml-5'>
-													Выйти
-												</span>
-											</Link>
-										</div>
-									</div>
-								</div>
+								<MenuIcon />
 							</div>
 						</ul>
 					</motion.div>
 				</AnimatePresence>
 			)}
-			{isMobile && (
-				<MobileNav />
-			)}
+			{isMobile && <MobileNav />}
 		</header>
 	)
 }

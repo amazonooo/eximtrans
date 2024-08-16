@@ -10,18 +10,21 @@
   },
   "dependencies": {
     "@gsap/react": "^2.1.1",
+    "@react-spring/web": "^9.7.4",
     "aos": "^3.0.0-beta.6",
     "classnames": "^2.5.1",
     "clsx": "^2.1.1",
     "cn": "^0.1.1",
-    "framer-motion": "^11.3.27",
+    "framer-motion": "^11.3.28",
     "gsap": "^3.12.5",
     "locomotive-scroll": "^5.0.0-beta.14",
     "lucide-react": "^0.427.0",
+    "mini-svg-data-uri": "^1.4.4",
     "next": "14.2.5",
     "react": "^18",
     "react-dom": "^18",
     "react-responsive": "^10.0.0",
+    "react-spring": "^9.7.4",
     "tailwind-merge": "^2.5.2"
   },
   "devDependencies": {

@@ -52,7 +52,7 @@ const CompDesc: FC = () => {
 				className='box max-w-[1000px]'
 			/>
 			<div className='pt-12 md:pt-16'>
-				<div className='flex flex-col md:flex-row gap-x-3 gap-y-4'>
+				<div className='flex flex-col md:flex-row gap-x-5 gap-y-4'>
 					{compData.map(card => (
 						<CompDescCard
 							key={card.id}

@@ -8,6 +8,7 @@ import { slideInFromLeft } from '@/utils/motion'
 import gsap from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
 
+
 const Hero: FC = () => {
   useEffect(() => {
     Aos.init()
@@ -28,15 +29,19 @@ const Hero: FC = () => {
 			>
 				<div className='absolute top-0 left-0 w-full h-full bg-[rgba(0,0,0,.3)]' />
 				<div className='absolute bottom-6 md:top-6 md:right-6'>
-					<p className='text-white'>
+					<p className='text-neutral-300'>
 						Железнодорожные и грузовые перевозки грузов
 					</p>
 				</div>
-				<div className='text-center absolute'>
-					<h1 className='text-white text-center text-4xl md:text-6xl font-bold'>Эксимтранс</h1>
-					<h2 className='text-white text-3xl md:text-4xl mt-12'>
-						контроль управления и надёжность в перовозке ваших грузов
-					</h2>
+				<div className='w-full h-full flex justify-center'>
+					<div className='absolute'>
+						<h1 className='text-white text-center text-5xl lg:text-8xl font-bold w-full'>
+							Эксимтранс
+						</h1>
+						<h2 className='text-white text-3xl lg:text-6xl mt-16 text-center'>
+							контроль управления и надёжность в перовозке ваших грузов
+						</h2>
+					</div>
 				</div>
 			</motion.div>
 		</motion.section>
