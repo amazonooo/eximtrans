@@ -6,7 +6,7 @@ import Heading from '@/components/ui/heading/Heading'
 
 export function InfiniteMovingCardsDemo() {
 	return (
-		<div className='h-fit rounded-lg flex flex-col antialiased bg-white relative overflow-hidden py-4 mb-2 md:mb-8'>
+		<div className='h-fit rounded-lg flex flex-col antialiased bg-white relative overflow-hidden py-4'>
       <Heading text='Наша клиентская база' className='' />
 			<InfiniteMovingCards
         className='pt-8 md:pt-12'
