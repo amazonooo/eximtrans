@@ -17,20 +17,45 @@ const ContactsMain: React.FC = () => {
 
     const [selectedItem, setSelectedItem] = useState(menuItems[0]);
 
-    const getContent = (item: string) => {
-        switch (item) {
-            case 'Промывка цистерн на ППС':
-                return 'Контент для промывки цистерн на ППС';
-            case 'Ремонт вагонов':
-                return 'Контент для ремонта вагонов';
-            // Добавьте остальные случаи
-            default:
-                return 'Выберите пункт меню';
-        }
-    };
+const getContent = (item: string) => {
+	switch (item) {
+		case 'Промывка цистерн на ППС':
+			return (
+				<div>
+					<p>Контент для промывки цистерн на ППС</p>
+					<img
+						src='/images/cistern.jpg'
+						alt='Промывка цистерн'
+						className='mt-4'
+					/>
+				</div>
+			)
+		case 'Ремонт вагонов':
+			return (
+				<div>
+					<p>Контент для ремонта вагонов</p>
+					<img src='/images/vagon.jpg' alt='Ремонт вагонов' className='mt-4' />
+				</div>
+			)
+		case 'Партнерам':
+			return (
+				<div>
+					<p>Контент для партнеров</p>
+					<ul className='list-disc pl-5'>
+						<li>Партнер 1</li>
+						<li>Партнер 2</li>
+						<li>Партнер 3</li>
+					</ul>
+				</div>
+			)
+		// Добавьте остальные случаи
+		default:
+			return <p>Выберите пункт меню</p>
+	}
+}
 
     return (
-        <div className='relative flex items-center justify-center w-full mb-24 md:mb-36 bg-white rounded-lg'>
+        <div className='relative flex w-full mb-12 md:mb-24 bg-white rounded-lg'>
             <SideMenu
                 items={menuItems}
                 selectedItem={selectedItem}
