@@ -14,28 +14,6 @@ interface ICompDescCard {
 
 
 const CompDescCard: FC<ICompDescCard> = ({ id, title, count, desc }) => {
-	gsap.registerPlugin(ScrollTrigger)
-
-	useLayoutEffect(() => {
-		gsap.from('.anim', {
-			opacity: 0,
-			x: -500,
-			duration: 2,
-			scrollTrigger: {
-				trigger: '.anim',
-			},
-		})
-		gsap.to('.anim', {
-			opacity: 1,
-			x: 0,
-			duration: 2,
-			scrollTrigger: {
-				trigger: '.anim',
-			},
-		})
-	}, [])
-
-
 	function Number({ n }: any) {
 		const { number } = useSpring({
 			from: { number: 0 },
@@ -47,7 +25,7 @@ const CompDescCard: FC<ICompDescCard> = ({ id, title, count, desc }) => {
 	}
 
 	return (
-		<article className='anim bg-white h-[356px] w-[356px] sm:h-[450px] sm:w-[450px] md:h-[260px] md:w-[260px] lg:h-[320px] lg:w-[320px] xl:h-[500px] xl:w-[500px] group shadow rounded-full'>
+		<article className='bg-white h-[356px] w-[356px] sm:h-[450px] sm:w-[450px] md:h-[260px] md:w-[260px] lg:h-[320px] lg:w-[320px] xl:h-[500px] xl:w-[500px] group shadow rounded-full'>
 			<div className='flex flex-col items-center h-full px-8 lg:px-12 py-10 lg:py-14 xl:py-24 gap-y-16 md:gap-y-4 xl:gap-y-16'>
 				<h2 className='text-3xl lg:text-4xl text-[#930D40] text-center whitespace-nowrap'>
 					{title}
