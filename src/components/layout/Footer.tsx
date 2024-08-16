@@ -13,9 +13,9 @@ const Footer = () => {
 				</div>
 				<div className='flex flex-col items-start md:items-center'>
 					<FooterItems
-						title='О компании'
 						links={[
-							{ href: '#', text: 'Услуги' },
+							{ href: '/services', text: 'Услуги' },
+							{ href: '/about', text: 'О компании' },
 							{ href: '#', text: 'Пресс-центр' },
 							{ href: '#', text: 'Архив новостей', isGray: true },
 							{ href: '#', text: 'Фирменный стиль', isGray: true },

@@ -6,7 +6,7 @@ import { ScrollTrigger } from 'gsap/ScrollTrigger'
 import gsap from 'gsap'
 
 interface FooterItemProps {
-	title: string
+	title?: string
 	links: { href: string; text: string; isGray?: boolean }[]
 }
 
