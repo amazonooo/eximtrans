@@ -33,11 +33,13 @@ export const Header = ({
 }) => {
 	const pathname = usePathname()
 
-	const isLoggedLogin = pathname === '/login'
-	const isLoggedRegister = pathname === '/register'
+	// const router = useRouter()
 
-	if (isLoggedLogin) return null
-	if (isLoggedRegister) return null
+	// const isLoggedLogin = pathname === '/login'
+	// const isLoggedRegister = pathname === '/register'
+
+	// if (isLoggedLogin) return null
+	// if (isLoggedRegister) return null
 
 
 
@@ -80,7 +82,7 @@ export const Header = ({
 	// 		buttonRef.current &&
 	// 		!buttonRef.current.contains(event.target)
 	// 	) {
-	// 		setDropdownOpen(false)
+	// 		setDropdownOpen(false)В
 	// 	}
 	// }
 
@@ -126,16 +128,16 @@ export const Header = ({
 							<li className='flex justify-between lg:gap-x-4 xl:gap-x-12 font-semibold'>
 								{navItems.map((navItem: any, idx: number) => (
 									<Link
-										key={`link=${idx}`}
+										key={navItem.link}
 										href={navItem.link}
 										className={cn(
-											'relative dark:text-neutral-50 font-semibold cursor-pointer items-center  flex space-x-1 transition-colors duration-300 text-neutral-600 dark:hover:text-neutral-400 hover:text-neutral-700'
+											`relative dark:text-neutral-50 font-semibold cursor-pointer items-center  flex space-x-1 transition-colors duration-300 text-neutral-600 dark:hover:text-neutral-400 hover:text-neutral-700`
 										)}
 									>
 										<span className='block sm:hidden'>{navItem.icon}</span>
 										{/* add !cursor-pointer */}
 										{/* remove hidden sm:block for the mobile responsive */}
-										<span className='xl:text-lg font-medium text-neutral-700 hover:text-[#930d4bd5] transition-colors duration-300 lg:text-sm !cursor-pointer'>
+										<span className={`xl:text-lg font-bold text-neutral-900 hover:text-[#930d4bd5] transition-colors duration-300 lg:text-sm !cursor-pointer ${pathname === navItem.link ? 'text-[#930d4bd5]' : ''}`}>
 											{navItem.name}
 										</span>
 									</Link>

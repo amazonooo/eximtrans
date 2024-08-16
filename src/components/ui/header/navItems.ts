@@ -1,5 +1,5 @@
 export const navItems = [
-	{ name: 'О компании', link: '/news' },
+	{ name: 'О компании', link: '/about' },
 	{ name: 'Услуги', link: '/servers' },
 	{ name: 'Карьера', link: '#testimonials' },
 	{ name: 'Компании', link: '/rules' },

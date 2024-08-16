@@ -10,6 +10,7 @@ const config: Config = {
 		extend: {
 			colors: {
 				primary: '#c7e4ff',
+				'primary-red': '#930d4bd5',
 			},
 			screens: {
 				sm: '620px',
