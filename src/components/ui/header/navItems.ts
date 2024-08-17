@@ -1,7 +1,7 @@
 export const navItems = [
 	{ name: 'О компании', link: '/about' },
 	{ name: 'Услуги', link: '/services' },
-	{ name: 'Карьера', link: '#testimonials' },
+	{ name: 'Карьера', link: '/career' },
 	{ name: 'Контакты', link: '/contacts' },
 ]
 

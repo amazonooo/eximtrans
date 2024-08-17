@@ -20,8 +20,8 @@ const Footer = () => {
 							{ href: '#', text: 'Архив новостей', isGray: true },
 							{ href: '#', text: 'Фирменный стиль', isGray: true },
 							{ href: '#', text: 'Медиабанк'},
-							{ href: '#', text: 'ПГК Диджитал' },
 							{ href: '/contacts', text: 'Контакты' },
+							{ href: '/career', text: 'Карьера' },
 						]}
 					/>
 				</div>

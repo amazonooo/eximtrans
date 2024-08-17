@@ -3,6 +3,7 @@
 import { useState } from 'react'
 import Heading from '../ui/heading/Heading'
 import Link from 'next/link'
+import { usePathname } from 'next/navigation'
 
 const cities = [
 	{
@@ -32,6 +33,8 @@ const cities = [
 ]
 
 export default function GlobeComponent() {
+	const pathname = usePathname()
+
 	const [selectedCity, setSelectedCity] = useState(cities[0])
 
 	return (
@@ -55,14 +58,18 @@ export default function GlobeComponent() {
 							</button>
 						))}
 					</div>
-					<div className='mt-10 lg:mt-32 flex items-center justify-center font-medium'>
-						<Link
-							href={'/contacts'}
-							className='bg-white cursor-pointer text-center px-8 py-5 rounded-xl hover:bg-primary-red hover:text-white transition-colors duration-500'
-						>
-							Контакты
-						</Link>
-					</div>
+					{pathname === '/contacts' ? (
+						''
+					) : (
+						<div className='mt-10 lg:mt-32 flex items-center justify-center font-medium'>
+							<Link
+								href={'/contacts'}
+								className='bg-white cursor-pointer text-center px-8 py-5 rounded-xl hover:bg-primary-red hover:text-white transition-colors duration-500'
+							>
+								Контакты
+							</Link>
+						</div>
+					)}
 				</div>
 				<div className='relative h-[300px] w-[300px] sm:w-[500px] sm:h-[500px] md:w-[700px] md:h-[700px] lg:w-[800px] lg:h-[800px]'>
 					<img src='/planet.png' alt='Planet' className='w-full h-full' />
