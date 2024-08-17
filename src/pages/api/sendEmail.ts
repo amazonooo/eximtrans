@@ -1,7 +1,7 @@
 import { NextRequest, NextResponse } from 'next/server'
 import nodemailer from 'nodemailer'
 
-export default async function ContactAPI(req: any, res: any) {
+export default async function SendEmailAPI(req: any, res: any) {
   const { name, email, message } = req.body
 
   const user = process.env.user

@@ -16,7 +16,7 @@ export default function CareerForm() {
     }
 
     console.log(data)
-    const response = await fetch('/api/contact', {
+    const response = await fetch('/api/sendEmail', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json'
