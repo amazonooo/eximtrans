@@ -2,31 +2,32 @@
 
 import { useState } from 'react'
 import Heading from '../ui/heading/Heading'
+import Link from 'next/link'
 
 const cities = [
 	{
 		name: 'Москва',
 		phone: '8 800 775-16-16',
 		address: 'Москва, ул. Новоярзанская, д. 24',
-		position: { top: '50%', left: '55%' },
+		position: { top: '30%', left: '27%' },
 	},
 	{
 		name: 'Санкт-Петербург',
 		phone: '8 800 123-45-67',
 		address: 'Санкт-Петербург, ул. Ленина, д. 10',
-		position: { top: '40%', left: '60%' },
+		position: { top: '24%', left: '29%' },
 	},
 	{
 		name: 'Воронеж',
 		phone: '8 800 123-45-67',
 		address: 'Санкт-Петербург, ул. Ленина, д. 10',
-		position: { top: '70%', left: '30%' },
+		position: { top: '32.5%', left: '23%' },
 	},
 	{
 		name: 'Новосибирск',
 		phone: '8 800 123-45-67',
 		address: 'Санкт-Петербург, ул. Ленина, д. 10',
-		position: { top: '20%', left: '80%' },
+		position: { top: '36%', left: '47%' },
 	},
 ]
 
@@ -34,53 +35,64 @@ export default function GlobeComponent() {
 	const [selectedCity, setSelectedCity] = useState(cities[0])
 
 	return (
-		<section className='relative flex items-center flex-col justify-center mt-16 lg:mt-36 w-full mb-24 md:mb-36'>
+		<section className='flex items-center flex-col justify-center w-full mb-12 md:mb-24'>
 			<Heading text='Наши офисы' className='text-center' />
-			<div className='flex mb-4 space-y-2 pt-12 md:pt-16'>
-				{cities.map((city, index) => (
-					<button
-						key={index}
-						onClick={() => setSelectedCity(city)}
-						className={`px-4 py-2 rounded-lg cursor-pointer transition-all duration-300 
-              ${
-								selectedCity.name === city.name
-									? 'bg-[#930d4bd5] text-white'
-									: 'bg-gray-200 text-gray-800'
-							}`}
-					>
-						{city.name}
-					</button>
-				))}
-			</div>
+			<div className='flex flex-col lg:flex-row items-center justify-center'>
+				<div>
+					<div className='grid grid-cols-2 gap-3 pt-12 md:pt-16 h-fit w-fit'>
+						{cities.map((city, index) => (
+							<button
+								key={index}
+								onClick={() => setSelectedCity(city)}
+								className={`px-2 py-1 rounded-lg cursor-pointer transition-all duration-300 
+								${
+									selectedCity.name === city.name
+										? 'bg-[#930d4bd5] text-white'
+										: 'bg-white text-gray-800'
+								}`}
+							>
+								{city.name}
+							</button>
+						))}
+					</div>
+					<div className='mt-10 lg:mt-32 flex items-center justify-center font-medium'>
+						<Link
+							href={'/contacts'}
+							className='bg-white cursor-pointer text-center px-8 py-5 rounded-xl hover:bg-primary-red hover:text-white transition-colors duration-500'
+						>
+							Контакты
+						</Link>
+					</div>
+				</div>
+				<div className='relative h-[300px] w-[300px] sm:w-[500px] sm:h-[500px] md:w-[700px] md:h-[700px] lg:w-[800px] lg:h-[800px]'>
+					<img src='/planet.png' alt='Planet' className='w-full h-full' />
 
-			<div className='relative w-[900px] h-[900px]'>
-				<img src='/planet.jpg' alt='Planet' className='w-full h-full' />
+					{/* Rotating Circle */}
 
-				{/* Rotating Circle */}
-				{/* <div className='absolute inset-0 flex items-center justify-center'>
-					<div className='w-[130%] h-[130%] border-t-4 border-gray-300 rounded-full animate-spin'></div>
-				</div> */}
-
-				{/* City Points */}
-				{cities.map((city, index) => (
-					<div
-						key={index}
-						className={`absolute w-2 h-2 rounded-full transition-colors duration-300
+					{/* City Points */}
+					{cities.map((city, index) => (
+						<div
+							key={index}
+							className={`absolute w-2 h-2 rounded-full transition-colors duration-300
               ${
 								selectedCity.name === city.name
 									? 'bg-[#930d4bd5]'
 									: 'bg-gray-400'
 							}`}
-						style={{ top: city.position.top, left: city.position.left }}
-					/>
-				))}
-			</div>
-
-			{/* City Information */}
-			<div className='mt-4 text-center'>
-				<h2 className='text-xl font-semibold'>{selectedCity.name}</h2>
-				<p className='text-lg'>{selectedCity.phone}</p>
-				<p className='text-sm'>{selectedCity.address}</p>
+							style={{ top: city.position.top, left: city.position.left }}
+						/>
+					))}
+					{/* City Information */}
+					<div className='text-black absolute bottom-8 right-0 sm:bottom-1/4 sm:-translate-y-1/4 sm:left-[35%] sm:text-white'>
+						<h2 className='text-lg sm:text-2xl md:text-4xl font-semibold'>
+							{selectedCity.name}
+						</h2>
+						<p className='text-xl sm:text-3xl md:text-5xl font-bold'>
+							{selectedCity.phone}
+						</p>
+						<p className='text-sm md:text-base'>{selectedCity.address}</p>
+					</div>
+				</div>
 			</div>
 		</section>
 	)

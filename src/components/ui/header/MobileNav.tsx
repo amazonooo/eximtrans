@@ -21,7 +21,7 @@ const MobileNav: FC = () => {
 					{/* {isOpen ? <X size={35} /> : <Menu size={35} />} */}
 					<div className='flex flex-col items-center justify-center'>
 						<div
-							className={`-translate-y-[1.5px] w-7 h-0.5 bg-white transition-all duration-400 ${
+							className={`-translate-y-0.5 w-7 h-0.5 bg-white transition-all duration-400 ${
 								isOpen ? 'rotate-45 translate-y-[1.5px]' : ''
 							}`}
 						></div>
@@ -29,7 +29,7 @@ const MobileNav: FC = () => {
 							className={`w-7 h-0.5 bg-white transition-all duration-400 ${isOpen ? 'hidden' : ''}`}
 						></div>
 						<div
-							className={`translate-y-[1.5px] w-7 h-0.5 bg-white transition-all duration-400 ${
+							className={`translate-y-0.5 w-7 h-0.5 bg-white transition-all duration-400 ${
 								isOpen ? '-rotate-45 -translate-y-[1.5px]' : ''
 							}`}
 						></div>

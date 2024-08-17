@@ -38,7 +38,7 @@ const Hero: FC = () => {
 						<h1 className='text-white text-center text-5xl lg:text-8xl font-bold w-full'>
 							Эксимтранс
 						</h1>
-						<h2 className='text-white text-3xl lg:text-6xl mt-16 text-center'>
+						<h2 className='text-white text-3xl lg:text-5xl mt-16 text-center'>
 							контроль управления и надёжность в перовозке ваших грузов
 						</h2>
 					</div>
