@@ -46,7 +46,7 @@ const Mission: FC = () => {
   return (
 		<section className='flex flex-col items-center justify-center mb-24 md:mb-36 px-5 sm:px-10 md:px-15 lg:px-28 xl:px-[182.5px]'>
 			<div className=''>
-				<div className='flex flex-col md:flex-row items-center gap-x-6'>
+				<div className='flex flex-col md:flex-row items-center gap-x-6 gap-y-8'>
 					<div className='mission-top'>
 						<h1 className=' text-2xl md:text-4xl text-black font-semibold mb-6'>
 							Наша миссия
