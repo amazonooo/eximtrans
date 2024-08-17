@@ -38,7 +38,7 @@ export default function GlobeComponent() {
 	const [selectedCity, setSelectedCity] = useState(cities[0])
 
 	return (
-		<section className='flex items-center flex-col justify-center w-full mb-12 md:mb-24'>
+		<section className='flex items-center flex-col justify-center w-full mb-24'>
 			<Heading text='Наши офисы' className='text-center' />
 			<div className='flex flex-col lg:flex-row items-center justify-center'>
 				<div>
@@ -80,7 +80,7 @@ export default function GlobeComponent() {
 					{cities.map((city, index) => (
 						<div
 							key={index}
-							className={`absolute w-2 h-2 rounded-full transition-colors duration-300
+							className={`absolute h-1.5 w-1.5 md:w-2 md:h-2 rounded-full transition-colors duration-300
               ${
 								selectedCity.name === city.name
 									? 'bg-[#930d4bd5]'
@@ -90,7 +90,7 @@ export default function GlobeComponent() {
 						/>
 					))}
 					{/* City Information */}
-					<div className='text-black absolute bottom-8 right-0 sm:bottom-1/4 sm:-translate-y-1/4 sm:left-[35%] sm:text-white'>
+					<div className='text-black absolute -bottom-10 left-3 sm:bottom-1/4 sm:-translate-y-1/4 sm:left-[35%] sm:text-white'>
 						<h2 className='text-lg sm:text-2xl md:text-4xl font-semibold'>
 							{selectedCity.name}
 						</h2>
