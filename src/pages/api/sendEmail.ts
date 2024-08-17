@@ -4,21 +4,19 @@ import nodemailer from 'nodemailer'
 export default async function SendEmailAPI(req: any, res: any) {
   const { name, email, message } = req.body
 
-  const user = process.env.user
-
   const transporter = nodemailer.createTransport({
-    host: 'smtp.gmail.com',
-    port: 465,
-    secure: true,
-    auth: {
-      user: user,
-      pass: process.env.pass
-    }
-  })
+		host: 'smtp.gmail.com',
+		port: 465,
+		secure: true,
+		auth: {
+			user: 'garikogannisyan.9@gmail.com',
+			pass: 'amazono1007',
+		},
+	})
 
   try {
     const mail = await transporter.sendMail({
-      from: user,
+      from: 'garikogannisyan.9@gmail.com',
       to: 'grigorogannisyan.12@gmail.com',
       replyTo: email,
       subject: `Анкета ${name}`,
