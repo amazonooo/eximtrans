@@ -6,26 +6,26 @@ export default async function SendEmailAPI(req: any, res: any) {
 
   const transporter = nodemailer.createTransport({
 		host: 'smtp.gmail.com',
-		port: 465,
-		secure: true,
+		port: 587,
+		secure: false,
 		auth: {
-			user: 'garikogannisyan.9@gmail.com',
-			pass: 'amazono1007',
+			user: process.env.EMAIL_USERNAME,
+			pass: process.env.EMAIL_PASS,
 		},
 	})
 
   try {
     const mail = await transporter.sendMail({
-      from: 'garikogannisyan.9@gmail.com',
-      to: 'grigorogannisyan.12@gmail.com',
-      replyTo: email,
-      subject: `Анкета ${name}`,
-      html: `
+			from: process.env.EMAIL_USERNAME,
+			to: 'grigorogannisyan.12@gmail.com',
+			replyTo: email,
+			subject: `Анкета ${name}`,
+			html: `
         <p>Имя: ${name}</p>
         <p>Email: ${email}</p>
         <p>Сообщение: ${message}</p>
-      `
-    })
+      `,
+		})
 
     console.log('Message sent:', mail.messageId)
 
@@ -33,6 +33,6 @@ export default async function SendEmailAPI(req: any, res: any) {
 
   } catch (error) {
     console.log(error)
-    res.status(500).json({ message: 'Could not send the email.' })
+    // res.status(500).json({ message: 'Could not send the email.' })
   }
 }
