@@ -2,7 +2,7 @@
 
 import gsap from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
-import { FC, useEffect, useLayoutEffect } from 'react'
+import { FC, useEffect, useLayoutEffect, useRef } from 'react'
 import { useSpring, animated } from 'react-spring'
 
 interface ICompDescCard {
@@ -12,9 +12,12 @@ interface ICompDescCard {
   desc: string
 }
 
+gsap.registerPlugin(ScrollTrigger)
 
 const CompDescCard: FC<ICompDescCard> = ({ id, title, count, desc }) => {
-	function Number({ n }: any) {
+	const cardRef = useRef<HTMLDivElement>(null)
+
+  function Number({ n }: any) {
 		const { number } = useSpring({
 			from: { number: 0 },
 			number: n,
@@ -24,8 +27,25 @@ const CompDescCard: FC<ICompDescCard> = ({ id, title, count, desc }) => {
 		return <animated.div>{number.to(n => n.toFixed(0))}</animated.div>
 	}
 
+	 useEffect(() => {
+			const card = cardRef.current
+
+			if (card) {
+				ScrollTrigger.create({
+					trigger: card,
+					start: 'top 80%',
+					onEnter: () => gsap.to(card, { opacity: 1, duration: 0.5 }),
+					onEnterBack: () => gsap.to(card, { opacity: 1, duration: 0.5 }),
+					onLeave: () => gsap.to(card, { opacity: 0, duration: 0.5 }),
+					onLeaveBack: () => gsap.to(card, { opacity: 0, duration: 0.5 }),
+				})
+			}
+
+			return () => ScrollTrigger.getAll().forEach(trigger => trigger.kill())
+		}, [])
+
 	return (
-		<article className='bg-white h-[316px] w-[316px] sm:h-[450px] sm:w-[450px] md:h-[260px] md:w-[260px] lg:h-[320px] lg:w-[320px] xl:h-[430px] xl:w-[430px] group shadow rounded-full'>
+		<article ref={cardRef} className='bg-white h-[316px] w-[316px] sm:h-[450px] sm:w-[450px] md:h-[260px] md:w-[260px] lg:h-[320px] lg:w-[320px] xl:h-[430px] xl:w-[430px] group shadow rounded-full'>
 			<div className='flex flex-col items-center h-full px-8 lg:px-12 py-10 lg:py-14 xl:py-24 gap-y-16 md:gap-y-4 xl:gap-y-16'>
 				<h2 className='text-3xl lg:text-4xl text-[#930D40] text-center whitespace-nowrap'>
 					{title}

@@ -9,14 +9,7 @@ import { fadeIn } from '@/utils/motion'
 export function InfiniteMovingCardsDemo() {
 	return (
 		<div className='h-fit rounded-lg flex flex-col antialiased bg-white relative overflow-hidden py-4'>
-			<motion.div
-				variants={fadeIn('down', 'tween', 0.3, 1)}
-				initial='hidden'
-				whileInView='show'
-				viewport={{ once: true, amount: 0.3 }}
-			>
-				<Heading text='Наша клиентская база' className='' />
-			</motion.div>
+			<Heading text='Наша клиентская база' className='' />
 			<InfiniteMovingCards
 				className='pt-8 md:pt-12'
 				items={testimonials}
