@@ -1,5 +1,3 @@
-'use client'
-
 import React from 'react'
 import { motion } from 'framer-motion'
 import { fadeIn } from '@/utils/motion'
@@ -16,11 +14,7 @@ const SideMenu: React.FC<SideMenuProps> = ({
 	onItemSelect,
 }) => {
 	return (
-		<motion.div
-			variants={fadeIn('right', 'tween', 0.3, 1)}
-			initial='hidden'
-			whileInView='show'
-			viewport={{ once: true, amount: 0.3 }}
+		<div
 			className='w-1/3 bg-primary text-black font-medium rounded-lg'
 		>
 			<ul>
@@ -36,7 +30,7 @@ const SideMenu: React.FC<SideMenuProps> = ({
 					</li>
 				))}
 			</ul>
-		</motion.div>
+		</div>
 	)
 }
 

@@ -57,7 +57,11 @@ const ContactsMain: React.FC = () => {
 	}
 
     return (
-			<div
+			<motion.div
+				variants={fadeIn('down', 'tween', 0.3, 1)}
+				initial='hidden'
+				whileInView='show'
+				viewport={{ once: true, amount: 0.4 }}
 				className='relative flex w-full mb-12 md:mb-24 bg-white rounded-lg'
 			>
 				<SideMenu
@@ -66,7 +70,7 @@ const ContactsMain: React.FC = () => {
 					onItemSelect={setSelectedItem}
 				/>
 				<ContentArea content={getContent(selectedItem)} />
-			</div>
+			</motion.div>
 		)
 };
 
