@@ -4,6 +4,8 @@ import { useState } from 'react'
 import Heading from '../ui/heading/Heading'
 import Link from 'next/link'
 import { usePathname } from 'next/navigation'
+import { motion } from 'framer-motion'
+import { fadeIn } from '@/utils/motion'
 
 const cities = [
 	{
@@ -39,10 +41,23 @@ export default function GlobeComponent() {
 
 	return (
 		<section className='flex items-center flex-col justify-center w-full mb-24'>
-			<Heading text='Наши офисы' className='text-center' />
+			<motion.div
+				variants={fadeIn('right', 'tween', 0.3, 0.8)}
+				initial='hidden'
+				whileInView='show'
+				viewport={{ once: true, amount: 0.4 }}
+			>
+				<Heading text='Наши офисы' className='text-center' />
+			</motion.div>
 			<div className='flex flex-col lg:flex-row items-center justify-center'>
 				<div>
-					<div className='grid grid-cols-2 gap-3 pt-12 md:pt-16 h-fit w-fit'>
+					<motion.div
+						variants={fadeIn('right', 'tween', 0.3, 1)}
+						initial='hidden'
+						whileInView='show'
+						viewport={{ once: true, amount: 0.4 }}
+						className='grid grid-cols-2 gap-3 pt-12 md:pt-16 h-fit w-fit'
+					>
 						{cities.map((city, index) => (
 							<button
 								key={index}
@@ -57,21 +72,33 @@ export default function GlobeComponent() {
 								{city.name}
 							</button>
 						))}
-					</div>
+					</motion.div>
 					{pathname === '/contacts' ? (
 						''
 					) : (
-						<div className='mt-10 lg:mt-32 flex items-center justify-center font-medium'>
+						<motion.div
+							variants={fadeIn('right', 'tween', 0.3, 1)}
+							initial='hidden'
+							whileInView='show'
+							viewport={{ once: true, amount: 0.4 }}
+							className='mt-10 lg:mt-32 flex items-center justify-center font-medium'
+						>
 							<Link
 								href={'/contacts'}
 								className='bg-white cursor-pointer text-center px-8 py-5 rounded-xl hover:bg-primary-red hover:text-white transition-colors duration-500'
 							>
 								Контакты
 							</Link>
-						</div>
+						</motion.div>
 					)}
 				</div>
-				<div className='relative h-[300px] w-[300px] sm:w-[500px] sm:h-[500px] md:w-[700px] md:h-[700px] lg:w-[800px] lg:h-[800px]'>
+				<motion.div
+					variants={fadeIn('up', 'tween', 0.3, 1)}
+					initial='hidden'
+					whileInView='show'
+					viewport={{ once: true, amount: 0.4 }}
+					className='relative h-[300px] w-[300px] sm:w-[500px] sm:h-[500px] md:w-[700px] md:h-[700px] lg:w-[800px] lg:h-[800px]'
+				>
 					<img src='/planet.png' alt='Planet' className='w-full h-full' />
 
 					{/* Rotating Circle */}
@@ -99,7 +126,7 @@ export default function GlobeComponent() {
 						</p>
 						<p className='text-sm md:text-base'>{selectedCity.address}</p>
 					</div>
-				</div>
+				</motion.div>
 			</div>
 		</section>
 	)

@@ -4,6 +4,8 @@ import { useLayoutEffect } from 'react'
 import FooterLink from './FooterLink'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
 import gsap from 'gsap'
+import { motion } from 'framer-motion'
+import { fadeIn } from '@/utils/motion'
 
 interface FooterItemProps {
 	title?: string
@@ -11,45 +13,14 @@ interface FooterItemProps {
 }
 
 const FooterItems = ({ title, links }: FooterItemProps) => {
-	// gsap.registerPlugin(ScrollTrigger)
-
-	// useLayoutEffect(() => {
-	// 	gsap.from('.footer', {
-	// 		opacity: 0,
-	// 		x: -500,
-	// 		duration: 1.5,
-	// 		scrollTrigger: {
-	// 			trigger: '.footer',
-	// 		},
-	// 	})
-	// 	gsap.to('.footer', {
-	// 		opacity: 1,
-	// 		x: 0,
-	// 		duration: 1.5,
-	// 		scrollTrigger: {
-	// 			trigger: '.footer',
-	// 		},
-	// 	})
-	// 	gsap.from('.footer-in', {
-	// 		opacity: 0,
-	// 		x: -200,
-	// 		duration: 1,
-	// 		scrollTrigger: {
-	// 			trigger: '.footer-in',
-	// 		},
-	// 	})
-	// 	gsap.to('.footer-in', {
-	// 		opacity: 1,
-	// 		x: 0,
-	// 		duration: 1,
-	// 		scrollTrigger: {
-	// 			trigger: '.footer-in',
-	// 		},
-	// 	})
-	// }, [])
-
 	return (
-		<div className='footer-in'>
+		<motion.div
+			variants={fadeIn('down', 'tween', 0.3, 1)}
+			initial='hidden'
+			whileInView='show'
+			viewport={{ once: true, amount: 0.2 }}
+			className='footer-in'
+		>
 			<h3 className='mb-4 font-semibold'>{title}</h3>
 			<ul>
 				{links.map((link, index) => (
@@ -62,7 +33,7 @@ const FooterItems = ({ title, links }: FooterItemProps) => {
 					</li>
 				))}
 			</ul>
-		</div>
+		</motion.div>
 	)
 }
 

@@ -6,47 +6,18 @@ import gsap from 'gsap'
 import { ScrollTrigger } from 'gsap/all'
 import { compData } from '../ui/comp-desc/compData'
 import CompDescCard from '../ui/comp-desc/CompDescCard'
+import { motion } from 'framer-motion'
+import { fadeIn } from '@/utils/motion'
 
 const CompDesc: FC = () => {
-	// gsap.registerPlugin(ScrollTrigger)
-
-	// useLayoutEffect(() => {
-	// 	gsap.from('.sect', {
-	// 		opacity: 0,
-	// 		x: -1000,
-	// 		duration: 1.5,
-	// 		scrollTrigger: {
-	// 			trigger: '.sect',
-	// 		},
-	// 	})
-	// 	gsap.to('.sect', {
-	// 		opacity: 1,
-	// 		x: 0,
-	// 		duration: 1.5,
-	// 		scrollTrigger: {
-	// 			trigger: '.sect',
-	// 		},
-	// 	})
-	// 	gsap.from('.sect-box', {
-	// 		opacity: 0,
-	// 		x: -300,
-	// 		duration: 1.5,
-	// 		scrollTrigger: {
-	// 			trigger: '.sect-box',
-	// 		},
-	// 	})
-	// 	gsap.to('.sect-box', {
-	// 		opacity: 1,
-	// 		x: 0,
-	// 		duration: 1.5,
-	// 		scrollTrigger: {
-	// 			trigger: '.sect-box',
-	// 		},
-	// 	})
-	// }, [])
-
 	return (
-		<section className='flex flex-col items-center justify-center mb-24 md:mb-36 md:px-15 lg:px-28 xl:px-[182.5px]'>
+		<motion.section
+			variants={fadeIn('left', 'tween', 0.3, 1.2)}
+			initial='hidden'
+			whileInView='show'
+			viewport={{ once: true, amount: 0.4 }}
+			className='flex flex-col items-center justify-center mb-24 md:mb-36 md:px-15 lg:px-28 xl:px-[182.5px]'
+		>
 			<Heading
 				text='Крупнейший частный оператор грузовых железнодорожных перевозок России'
 				className='sect max-w-[1000px]'
@@ -64,7 +35,7 @@ const CompDesc: FC = () => {
 					))}
 				</div>
 			</div>
-		</section>
+		</motion.section>
 	)
 }
 

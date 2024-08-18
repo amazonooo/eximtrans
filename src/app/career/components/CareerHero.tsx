@@ -2,7 +2,7 @@
 
 import { FC } from 'react'
 import { motion } from 'framer-motion'
-import { slideInFromLeft } from '@/utils/motion'
+import { fadeIn, slideInFromLeft } from '@/utils/motion'
 import Heading from '@/components/ui/heading/Heading'
 
 const CareerHero: FC = () => {
@@ -19,7 +19,13 @@ const CareerHero: FC = () => {
 				className='bg-no-repeat bg-cover bg-center w-full h-[600px]'
 				variants={slideInFromLeft(0.6)}
 			></motion.div>
-			<motion.h1 className='mt-14' variants={slideInFromLeft(0.6)}>
+			<motion.h1
+				variants={fadeIn('right', 'tween', 0.3, .8)}
+				initial='hidden'
+				whileInView='show'
+				viewport={{ once: true, amount: 0.2 }}
+				className='mt-14'
+			>
 				<Heading text='Работа В «Эксимтранс»' />
 			</motion.h1>
 		</motion.section>

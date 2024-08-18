@@ -3,13 +3,22 @@
 import React, { useEffect, useState } from 'react'
 import { InfiniteMovingCards } from '@/components/ui/infinite-moving-cards/infinite-moving-cards'
 import Heading from '@/components/ui/heading/Heading'
+import { motion } from 'framer-motion'
+import { fadeIn } from '@/utils/motion'
 
 export function InfiniteMovingCardsDemo() {
 	return (
 		<div className='h-fit rounded-lg flex flex-col antialiased bg-white relative overflow-hidden py-4'>
-      <Heading text='Наша клиентская база' className='' />
+			<motion.div
+				variants={fadeIn('down', 'tween', 0.3, 1)}
+				initial='hidden'
+				whileInView='show'
+				viewport={{ once: true, amount: 0.3 }}
+			>
+				<Heading text='Наша клиентская база' className='' />
+			</motion.div>
 			<InfiniteMovingCards
-        className='pt-8 md:pt-12'
+				className='pt-8 md:pt-12'
 				items={testimonials}
 				direction='right'
 				speed='normal'
