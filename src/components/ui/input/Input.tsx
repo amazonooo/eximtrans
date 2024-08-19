@@ -1,5 +1,9 @@
+'use client'
+
 import React from 'react'
 import { FC } from 'react'
+import { motion } from 'framer-motion'
+import { fadeIn, slideIn } from '@/utils/motion'
 
 interface InputProps {
   placeholder: string
@@ -8,7 +12,12 @@ interface InputProps {
 
 const Input: FC<InputProps> = ({ placeholder, type }) => {
   return (
-		<input
+		<motion.input
+			value={type}
+			variants={fadeIn('left', 'tween', 0.3, 0.8)}
+			initial='hidden'
+			whileInView='show'
+			viewport={{ once: true, amount: 0.3 }}
 			autoComplete='off'
 			id={type}
 			required
