@@ -3,6 +3,8 @@
 import { Menu, X } from 'lucide-react'
 import { FC, useState } from 'react'
 import MobileNavItems from './MobileNavItems'
+import Image from 'next/image'
+import { AnimatePresence, motion } from 'framer-motion'
 
 const MobileNav: FC = () => {
   const [isOpen, setIsOpen] = useState(false)
@@ -11,32 +13,36 @@ const MobileNav: FC = () => {
   return (
 		<header className='pt-5 px-5 sm:px-10 h-full'>
 			<nav className='flex items-center justify-between h-full'>
-				<div className='text-2xl'>LOGO</div>
-				<div
-					onClick={() => setIsOpen(!isOpen)}
-					className='flex items-center justify-center group bg-[#930D40] rounded-full w-12 h-12'
-					onMouseEnter={() => setIsHovered(true)}
-					onMouseLeave={() => setIsHovered(false)}
-				>
-					{/* {isOpen ? <X size={35} /> : <Menu size={35} />} */}
-					<div className='flex flex-col items-center justify-center'>
-						<div
-							className={`-translate-y-0.5 w-7 h-0.5 bg-white transition-all duration-400 ${
-								isOpen ? 'rotate-45 translate-y-[1.5px]' : ''
-							}`}
-						></div>
-						<div
-							className={`w-7 h-0.5 bg-white transition-all duration-400 ${isOpen ? 'hidden' : ''}`}
-						></div>
-						<div
-							className={`translate-y-0.5 w-7 h-0.5 bg-white transition-all duration-400 ${
-								isOpen ? '-rotate-45 -translate-y-[1.5px]' : ''
-							}`}
-						></div>
-					</div>
+				<div className='z-[1000]'>
+					<Image src={'/logo.png'} alt='logo' width={120} height={120} />
 				</div>
+				<label className='flex flex-col gap-2 w-8 z-[1000]'>
+					<input
+						className='peer hidden'
+						type='checkbox'
+						onClick={() => setIsOpen(!isOpen)}
+					/>
+					<div className='rounded-2xl h-[3px] w-1/2 bg-black duration-500 peer-checked:rotate-[225deg] origin-right peer-checked:-translate-x-[12px] peer-checked:-translate-y-[1px]'></div>
+					<div className='rounded-2xl h-[3px] w-full bg-black duration-500 peer-checked:-rotate-45'></div>
+					<div className='rounded-2xl h-[3.1px] w-1/2 bg-black duration-500 place-self-end peer-checked:rotate-[225deg] origin-left peer-checked:translate-x-[12px] peer-checked:translate-y-[1px]'></div>
+				</label>
 			</nav>
-			<div>{isOpen && <MobileNavItems />}</div>
+			<AnimatePresence>
+				{isOpen && (
+					<motion.div
+						initial={{ x: '100%', opacity: 0 }}
+						animate={{ x: 0, opacity: 1 }}
+						exit={{ x: '100%', opacity: 0 }}
+						transition={{
+							duration: 0.3,
+							ease: 'easeInOut',
+						}}
+						className='fixed top-0 left-0 w-full h-full p-6 bg-white z-[999]'
+					>
+						<MobileNavItems />
+					</motion.div>
+				)}
+			</AnimatePresence>
 		</header>
 	)
 }
