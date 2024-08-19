@@ -5,6 +5,7 @@ import { FC, useState } from 'react'
 import MobileNavItems from './MobileNavItems'
 import Image from 'next/image'
 import { AnimatePresence, motion } from 'framer-motion'
+import Link from 'next/link'
 
 const MobileNav: FC = () => {
   const [isOpen, setIsOpen] = useState(false)
@@ -13,9 +14,9 @@ const MobileNav: FC = () => {
   return (
 		<header className='pt-5 px-5 sm:px-10 h-full'>
 			<nav className='flex items-center justify-between h-full'>
-				<div className='z-[1000]'>
+				<Link href={'/'} className='z-[1000]'>
 					<Image src={'/logo.png'} alt='logo' width={120} height={120} />
-				</div>
+				</Link>
 				<label className='flex flex-col gap-2 w-8 z-[1000]'>
 					<input
 						className='peer hidden'
@@ -39,7 +40,7 @@ const MobileNav: FC = () => {
 						}}
 						className='fixed top-0 left-0 w-full h-full p-6 bg-white z-[999]'
 					>
-						<MobileNavItems />
+						<MobileNavItems closeMenu={() => setIsOpen(false)} />
 					</motion.div>
 				)}
 			</AnimatePresence>
