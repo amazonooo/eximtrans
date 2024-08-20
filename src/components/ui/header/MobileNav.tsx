@@ -15,17 +15,17 @@ const MobileNav: FC = () => {
 		<header className='pt-5 px-5 sm:px-10 h-full'>
 			<nav className='flex items-center justify-between h-full'>
 				<Link href={'/'} className='z-[1000]'>
-					<Image src={'/logo.png'} alt='logo' width={120} height={120} />
+					<Image src={'/logo.png'} alt='logo' width={140} height={140} />
 				</Link>
-				<label className='flex flex-col gap-2 w-8 z-[1000]'>
+				<label className='flex flex-col gap-2 w-8 z-[1000] cursor-pointer'>
 					<input
 						className='peer hidden'
 						type='checkbox'
 						onClick={() => setIsOpen(!isOpen)}
 					/>
-					<div className='rounded-2xl h-[3px] w-1/2 bg-black duration-500 peer-checked:rotate-[225deg] origin-right peer-checked:-translate-x-[12px] peer-checked:-translate-y-[1px]'></div>
-					<div className='rounded-2xl h-[3px] w-full bg-black duration-500 peer-checked:-rotate-45'></div>
-					<div className='rounded-2xl h-[3.1px] w-1/2 bg-black duration-500 place-self-end peer-checked:rotate-[225deg] origin-left peer-checked:translate-x-[12px] peer-checked:translate-y-[1px]'></div>
+					<div className={`rounded-2xl h-[3px] w-1/2 bg-black duration-500 origin-right ${isOpen ? 'rotate-[225deg] -translate-x-[12px] -translate-y-[1px]' : ''}`}></div>
+					<div className={`rounded-2xl h-[3px] w-full bg-black duration-500 ${isOpen ? '-rotate-45' : ''}`}></div>
+					<div className={`rounded-2xl h-[3.1px] w-1/2 bg-black duration-500 place-self-end origin-left ${isOpen ? 'rotate-[225deg] translate-x-[12px] translate-y-[1px]' : ''}`}></div>
 				</label>
 			</nav>
 			<AnimatePresence>

@@ -11,7 +11,7 @@ const ContactsHero: FC = () => {
 		<motion.section
 			initial='hidden'
 			animate='visible'
-			className='flex flex-col items-center justify-center mt-16 lg:mt-36 w-full mb-14 md:mb-20'
+			className='flex flex-col items-center justify-center mt-16 lg:mt-44 w-full'
 		>
 			<motion.h1
 				variants={fadeIn('right', 'tween', 0.3, .8)}

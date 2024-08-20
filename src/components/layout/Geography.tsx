@@ -34,6 +34,7 @@ const cities = [
 	},
 ]
 
+
 export default function GlobeComponent() {
 	const pathname = usePathname()
 
@@ -41,14 +42,18 @@ export default function GlobeComponent() {
 
 	return (
 		<section className='flex items-center flex-col justify-center w-full mb-24'>
-			<motion.div
-				variants={fadeIn('right', 'tween', 0.3, 0.8)}
-				initial='hidden'
-				whileInView='show'
-				viewport={{ once: true, amount: 0.4 }}
-			>
-				<Heading text='Наши офисы' className='text-center' />
-			</motion.div>
+			{pathname === '/contacts' ? (
+				''
+			) : (
+				<motion.div
+					variants={fadeIn('right', 'tween', 0.3, 0.8)}
+					initial='hidden'
+					whileInView='show'
+					viewport={{ once: true, amount: 0.4 }}
+				>
+					<Heading text='Наши офисы' className='text-center' />
+				</motion.div>
+			)}
 			<div className='flex flex-col lg:flex-row items-center justify-center'>
 				<div>
 					<motion.div

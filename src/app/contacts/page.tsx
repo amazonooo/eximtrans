@@ -6,7 +6,7 @@ export default function ContactsPage() {
   return (
 		<main className='h-full w-full flex flex-col overflow-clip px-5 sm:px-10 md:px-15 lg:px-28 xl:px-[182.5px]'>
 			<div className='flex flex-col items-center justify-center'>
-				{/* <ContactsHero /> */}
+				<ContactsHero />
 				<GlobeComponent />
 				<ContactsMain />
 			</div>
