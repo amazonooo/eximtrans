@@ -15,7 +15,7 @@ const CompDesc: FC = () => {
 			variants={fadeIn('left', 'tween', 0.3, 1.2)}
 			initial='hidden'
 			whileInView='show'
-			viewport={{ once: true, amount: 0.4 }}
+			viewport={{ once: true, amount: 0.2 }}
 			className='flex flex-col items-center justify-center mb-24 md:mb-36 md:px-15 lg:px-28 xl:px-[182.5px]'
 		>
 			<Heading
