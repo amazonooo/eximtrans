@@ -2,7 +2,7 @@ export const compData = [
 	{
 		id: '1',
 		title: 'Вагонный парк',
-		count: 10,
+		count: 10000,
 		desc: 'вагонов',
 	},
 	{

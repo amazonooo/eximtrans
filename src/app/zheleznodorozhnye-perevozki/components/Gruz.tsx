@@ -17,6 +17,12 @@ const Gruz: FC = () => {
 					/>
 				))}
 			</div>
+			<div className='mt-16 md:mt-20'>
+				<SectionTitle
+					className='text-left md:text-center'
+					text='Наша компания предлагает широкий спектр услуг по железнодорожным перевозкам. Мы гарантируем надежную и своевременную доставку грузов'
+				/>
+			</div>
 		</section>
 	)
 }

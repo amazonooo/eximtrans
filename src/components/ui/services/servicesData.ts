@@ -11,7 +11,7 @@ export const servicesData = [
 		id: '1',
 		title: 'Автомобильные перевозки',
 		image: '/gruz-per.png',
-		href: '/',
+		href: '/avtomobilnye-perevozki',
 		anim: '1',
 	},
 	{
