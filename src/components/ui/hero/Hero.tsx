@@ -8,7 +8,6 @@ import { slideInFromLeft } from '@/utils/motion'
 import gsap from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
 
-
 const Hero: FC = () => {
   useEffect(() => {
     Aos.init()
@@ -22,7 +21,7 @@ const Hero: FC = () => {
 		>
 			<motion.div
 				variants={slideInFromLeft(0.8)}
-				className='bg-primary min-w-full h-[800px] bg-no-repeat bg-cover bg-center rounded-lg relative pt-32 px-10 pb-5 '
+				className='bg-primary min-w-full h-[750px] bg-no-repeat bg-cover bg-center rounded-lg relative pt-32 px-10 pb-5 '
 				style={{
 					backgroundImage: 'url(/hero.jpg)',
 				}}
@@ -38,7 +37,7 @@ const Hero: FC = () => {
 						<h1 className='text-white text-center text-5xl lg:text-8xl font-bold w-full'>
 							Эксимтранс
 						</h1>
-						<h2 className='text-white text-3xl lg:text-5xl mt-16 text-center'>
+						<h2 className='text-white text-3xl lg:text-5xl mt-16 text-center max-w-[1000px]'>
 							контроль управления и надёжность в перовозке ваших грузов
 						</h2>
 					</div>
