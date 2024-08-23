@@ -23,7 +23,7 @@ const GruzCard: FC<IGruzCard> = ({ id, title, image }) => {
 		>
 			<div
 				className={cn(
-					`bg-white cursor-pointer rounded-lg h-[356px] w-fit group hover:-translate-y-2 hover:shadow-xl duration-300 transition-all`
+					`bg-white rounded-lg h-[356px] w-fit group hover:-translate-y-2 hover:shadow-xl duration-300 transition-all`
 				)}
 			>
 				<article>

@@ -10,27 +10,31 @@ import { fadeIn } from '@/utils/motion'
 const cities = [
 	{
 		name: 'Москва',
-		phone: '8 800 775-16-16',
-		address: 'Москва, ул. Новоярзанская, д. 24',
+		phone: '+7 (495) 269-85-54',
+		address: 'Г. Москва, Варшавское шоссе д.1 стр.1-2 оф. 302А',
 		position: { top: '30%', left: '27%' },
+		email: 'info@abrail.ru',
 	},
 	{
 		name: 'Санкт-Петербург',
 		phone: '8 800 123-45-67',
 		address: 'Санкт-Петербург, ул. Ленина, д. 10',
 		position: { top: '24%', left: '29%' },
+		email: 'mihaylova@abrail.ru',
 	},
 	{
 		name: 'Воронеж',
-		phone: '8 800 123-45-67',
-		address: 'Санкт-Петербург, ул. Ленина, д. 10',
+		phone: '+7 (903) 773-08-46',
+		address: 'Воронежская обл. г. Лиски, ул. Комунистическая 64, оф. 1,2',
 		position: { top: '32.5%', left: '23%' },
+		email: 'liski@abrail.ru',
 	},
 	{
 		name: 'Новосибирск',
-		phone: '8 800 123-45-67',
-		address: 'Санкт-Петербург, ул. Ленина, д. 10',
+		phone: '+7 (495) 269-85-54',
+		address: 'Г. Новосибирск, ул. Фабричная, 4, оф. 302/4',
 		position: { top: '36%', left: '47%' },
+		email: 'info@abrail.ru',
 	},
 ]
 
@@ -122,7 +126,7 @@ export default function GlobeComponent() {
 						/>
 					))}
 					{/* City Information */}
-					<div className='text-black absolute -bottom-10 left-3 sm:bottom-1/4 sm:-translate-y-1/4 sm:left-[35%] sm:text-white'>
+					<div className='text-black absolute -bottom-16 left-3 sm:bottom-1/4 sm:-translate-y-1/4 sm:left-[35%] sm:text-white'>
 						<h2 className='text-lg sm:text-2xl md:text-4xl font-semibold'>
 							{selectedCity.name}
 						</h2>
@@ -130,6 +134,7 @@ export default function GlobeComponent() {
 							{selectedCity.phone}
 						</p>
 						<p className='text-sm md:text-base'>{selectedCity.address}</p>
+						<a href={`mailto:${selectedCity.email}`}>{selectedCity.email}</a>
 					</div>
 				</motion.div>
 			</div>
