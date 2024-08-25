@@ -23,7 +23,7 @@ export const servicesData = [
 	},
 	{
 		id: '3',
-		title: 'Продажа металлолома',
+		title: 'Продажа запчастей и металлолома',
 		image: '/shesterenki.jpg',
 		href: '/',
 		anim: '3',

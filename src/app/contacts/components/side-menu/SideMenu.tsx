@@ -15,13 +15,13 @@ const SideMenu: React.FC<SideMenuProps> = ({
 }) => {
 	return (
 		<div
-			className='w-1/3 bg-primary text-black font-medium rounded-lg'
+			className='w-full md:w-1/3 bg-primary text-black font-medium rounded-lg'
 		>
 			<ul>
 				{items.map(item => (
 					<li
 						key={item}
-						className={`p-4 text-xs sm:text-sm md:text-base lg:text-lg cursor-pointer border-b hover:text-white/90 transition-colors duration-300 ${
+						className={`p-4 text-sm sm:text-base md:text-lg cursor-pointer border-b hover:text-white/90 transition-colors duration-300 ${
 							selectedItem === item ? 'text-white/90' : ''
 						}`}
 						onClick={() => onItemSelect(item)}

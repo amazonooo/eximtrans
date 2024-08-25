@@ -9,9 +9,9 @@ interface ContentAreaProps {
 const ContentArea: React.FC<ContentAreaProps> = ({ content }: any) => {
 	return (
 		<div
-			className='w-2/3 p-8'
+			className='p-8 flex flex-col items-center w-full'
 		>
-			<h2 className='text-xl font-bold mb-4'>Контент:</h2>
+			<h2 className='text-xl md:text-3xl font-bold mb-4 text-center'>Контакты</h2>
 			<p>{content}</p>
 		</div>
 	)

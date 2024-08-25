@@ -37,7 +37,7 @@ const Contact: FC<IContact> = ({ title, image, name, desc, link, email, phone, d
 					<div className='flex flex-col gap-y-16'>
 						<SectionTitle text={title} className='max-w-[1000px]' />
 						<div className='flex flex-col items-center md:flex-row gap-y-6 justify-center gap-x-8'>
-							<motion.div
+							{/* <motion.div
 								variants={fadeIn('right', 'tween', 0.3, 1)}
 								initial='hidden'
 								whileInView='show'
@@ -50,7 +50,7 @@ const Contact: FC<IContact> = ({ title, image, name, desc, link, email, phone, d
 									width={250}
 									height={250}
 								/>
-							</motion.div>
+							</motion.div> */}
 							<motion.div
 								variants={fadeIn('left', 'tween', 0.3, 1)}
 								initial='hidden'
@@ -62,14 +62,22 @@ const Contact: FC<IContact> = ({ title, image, name, desc, link, email, phone, d
 								<p className='max-w-[530px] text-base md:text-lg mb-2'>
 									{desc}
 								</p>
-								<Link href={link} className='text-primary-red hover:underline'>
-									{link || phone}
-								</Link>
+								<div className='flex flex-col md:flex-row gap-5 items-center justify-center'>
+									<Link
+										href={link}
+										className='text-primary-red hover:underline'
+									>
+										{link}
+									</Link>
+									<Link href={'/'} className='text-primary-red hover:underline'>
+										{phone}
+									</Link>
+								</div>
 							</motion.div>
 						</div>
 						{pathname === '/remont-vagonov' && (
 							<div className='flex flex-col items-center md:flex-row gap-y-6 justify-center gap-x-8'>
-								<motion.div
+								{/* <motion.div
 									variants={fadeIn('right', 'tween', 0.3, 1)}
 									initial='hidden'
 									whileInView='show'
@@ -82,7 +90,7 @@ const Contact: FC<IContact> = ({ title, image, name, desc, link, email, phone, d
 										width={250}
 										height={250}
 									/>
-								</motion.div>
+								</motion.div> */}
 								<motion.div
 									variants={fadeIn('left', 'tween', 0.3, 1)}
 									initial='hidden'
@@ -94,12 +102,20 @@ const Contact: FC<IContact> = ({ title, image, name, desc, link, email, phone, d
 									<p className='max-w-[530px] text-base md:text-lg mb-2'>
 										{desc2}
 									</p>
-									<Link
-										href={link2}
-										className='text-primary-red hover:underline'
-									>
-										{link2 || phone2}
-									</Link>
+									<div className='flex flex-col md:flex-row gap-5 items-center justify-center'>
+										<Link
+											href={link2}
+											className='text-primary-red hover:underline'
+										>
+											{link2}
+										</Link>
+										<Link
+											href={'/'}
+											className='text-primary-red hover:underline'
+										>
+											{phone2}
+										</Link>
+									</div>
 								</motion.div>
 							</div>
 						)}
