@@ -16,10 +16,6 @@ const Footer = () => {
 						links={[
 							{ href: '/services', text: 'Услуги' },
 							{ href: '/about', text: 'О компании' },
-							// { href: '#', text: 'Пресс-центр' },
-							// { href: '#', text: 'Архив новостей', isGray: true },
-							// { href: '#', text: 'Фирменный стиль', isGray: true },
-							// { href: '#', text: 'Медиабанк'},
 							{ href: '/contacts', text: 'Контакты' },
 							{ href: '/career', text: 'Карьера' },
 						]}

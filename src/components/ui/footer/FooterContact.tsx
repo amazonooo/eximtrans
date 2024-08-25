@@ -37,11 +37,14 @@ const FooterContact = () => {
 			viewport={{ once: true, amount: 0.2 }}
 			className='footer-con text-center flex flex-col justify-between h-full'
 		>
-			<div>
-				<Link href={'/'} className='text-xl font-semibold'>
-					+7 (495) 269-85-54
-				</Link>
-				<p className='text-gray-500'>help@pgk.ru</p>
+			<div className='flex flex-col gap-y-8'>
+				<a href='tel:+74952698554'>+7 (495) 269-85-54</a>
+				<a
+					href='mailto:info@abrail.ru'
+					className='text-primary-red hover:underline-offset-4 hover:underline'
+				>
+					info@abrail.ru
+				</a>
 			</div>
 			<div className='text-primary-red'>Эксимтранс</div>
 		</motion.div>
