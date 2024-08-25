@@ -53,12 +53,12 @@ const ContactsMain: React.FC = () => {
 								Тетнев Александр Евгеньевич
 							</h2>
 							<div className='flex justify-center mt-4 gap-x-5 flex-col xl:flex-row items-center'>
-								<Link
-									href={'/'}
+								<a
+									href='tel:+74952698554'
 									className='text-primary-red hover:underline underline-offset-2 text-lg'
 								>
 									+7 (495) 269-85-54
-								</Link>
+								</a>
 								<Link
 									href={'/'}
 									className='text-primary-red hover:underline underline-offset-2 text-lg'
@@ -72,12 +72,12 @@ const ContactsMain: React.FC = () => {
 								Мамедов Али Бабашахович
 							</h2>
 							<div className='flex justify-center mt-4 gap-x-5 flex-col xl:flex-row items-center'>
-								<Link
-									href={'/'}
+								<a
+									href='tel:+74952698554'
 									className='text-primary-red hover:underline underline-offset-2 text-lg'
 								>
 									+7 (495) 269-85-54
-								</Link>
+								</a>
 								<Link
 									href={'/'}
 									className='text-primary-red hover:underline underline-offset-2 text-lg'
@@ -96,12 +96,12 @@ const ContactsMain: React.FC = () => {
 								Тетнев Александр Евгеньевич
 							</h2>
 							<div className='flex justify-center mt-4 gap-x-5 flex-col xl:flex-row items-center'>
-								<Link
-									href={'/'}
+								<a
+									href='tel:+74952698554'
 									className='text-primary-red hover:underline underline-offset-2 text-lg'
 								>
 									+7 (495) 269-85-54
-								</Link>
+								</a>
 								<Link
 									href={'/'}
 									className='text-primary-red hover:underline underline-offset-2 text-lg'
@@ -115,12 +115,12 @@ const ContactsMain: React.FC = () => {
 								Мамедов Али Бабашахович
 							</h2>
 							<div className='flex justify-center mt-4 gap-x-5 flex-col xl:flex-row items-center'>
-								<Link
-									href={'/'}
+								<a
+									href='tel:+74952698554'
 									className='text-primary-red hover:underline underline-offset-2 text-lg'
 								>
 									+7 (495) 269-85-54
-								</Link>
+								</a>
 								<Link
 									href={'/'}
 									className='text-primary-red hover:underline underline-offset-2 text-lg'
@@ -139,12 +139,12 @@ const ContactsMain: React.FC = () => {
 								Тетнев Александр Евгеньевич
 							</h2>
 							<div className='flex justify-center mt-4 gap-x-5 flex-col xl:flex-row items-center'>
-								<Link
-									href={'/'}
+								<a
+									href='tel:+74952698554'
 									className='text-primary-red hover:underline underline-offset-2 text-lg'
 								>
 									+7 (495) 269-85-54
-								</Link>
+								</a>
 								<Link
 									href={'/'}
 									className='text-primary-red hover:underline underline-offset-2 text-lg'
@@ -158,12 +158,12 @@ const ContactsMain: React.FC = () => {
 								Мамедов Али Бабашахович
 							</h2>
 							<div className='flex justify-center mt-4 gap-x-5 flex-col xl:flex-row items-center'>
-								<Link
-									href={'/'}
+								<a
+									href='tel:+74952698554'
 									className='text-primary-red hover:underline underline-offset-2 text-lg'
 								>
 									+7 (495) 269-85-54
-								</Link>
+								</a>
 								<Link
 									href={'/'}
 									className='text-primary-red hover:underline underline-offset-2 text-lg'
@@ -181,12 +181,12 @@ const ContactsMain: React.FC = () => {
 							Белова Людмила Александровна
 						</h2>
 						<div className='flex justify-center mt-4 gap-x-5 flex-col xl:flex-row items-center'>
-							<Link
-								href={'/'}
+							<a
+								href='tel:+74952698554'
 								className='text-primary-red hover:underline underline-offset-2 text-lg'
 							>
 								+7 (495) 269-85-54
-							</Link>
+							</a>
 							<Link
 								href={'/'}
 								className='text-primary-red hover:underline underline-offset-2 text-lg'
