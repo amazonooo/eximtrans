@@ -59,12 +59,12 @@ const ContactsMain: React.FC = () => {
 								>
 									+7 (495) 269-85-54
 								</a>
-								<Link
-									href={'/'}
+								<a
+									href='mailto:tae@abrail.ru'
 									className='text-primary-red hover:underline underline-offset-2 text-lg'
 								>
 									tae@abrail.ru
-								</Link>
+								</a>
 							</div>
 						</div>
 						<div className='mt-6 flex flex-col'>
@@ -78,12 +78,12 @@ const ContactsMain: React.FC = () => {
 								>
 									+7 (495) 269-85-54
 								</a>
-								<Link
-									href={'/'}
+								<a
+									href='mailto:mamedov@abrail.ru'
 									className='text-primary-red hover:underline underline-offset-2 text-lg'
 								>
-									mamedov@abrail.ru
-								</Link>
+									mamedov@abrail.ru{' '}
+								</a>
 							</div>
 						</div>
 					</div>
@@ -102,12 +102,12 @@ const ContactsMain: React.FC = () => {
 								>
 									+7 (495) 269-85-54
 								</a>
-								<Link
-									href={'/'}
+								<a
+									href='mailto:tae@abrail.ru'
 									className='text-primary-red hover:underline underline-offset-2 text-lg'
 								>
 									tae@abrail.ru
-								</Link>
+								</a>
 							</div>
 						</div>
 						<div className='mt-6 flex flex-col'>
@@ -121,12 +121,12 @@ const ContactsMain: React.FC = () => {
 								>
 									+7 (495) 269-85-54
 								</a>
-								<Link
-									href={'/'}
+								<a
+									href='mailto:mamedov@abrail.ru'
 									className='text-primary-red hover:underline underline-offset-2 text-lg'
 								>
-									mamedov@abrail.ru
-								</Link>
+									mamedov@abrail.ru{' '}
+								</a>
 							</div>
 						</div>
 					</div>
@@ -145,12 +145,12 @@ const ContactsMain: React.FC = () => {
 								>
 									+7 (495) 269-85-54
 								</a>
-								<Link
-									href={'/'}
+								<a
+									href='mailto:tae@abrail.ru'
 									className='text-primary-red hover:underline underline-offset-2 text-lg'
 								>
 									tae@abrail.ru
-								</Link>
+								</a>
 							</div>
 						</div>
 						<div className='mt-6 flex flex-col'>
@@ -164,12 +164,12 @@ const ContactsMain: React.FC = () => {
 								>
 									+7 (495) 269-85-54
 								</a>
-								<Link
-									href={'/'}
+								<a
+									href='mailto:mamedov@abrail.ru'
 									className='text-primary-red hover:underline underline-offset-2 text-lg'
 								>
-									mamedov@abrail.ru
-								</Link>
+									mamedov@abrail.ru{' '}
+								</a>
 							</div>
 						</div>
 					</div>
@@ -187,12 +187,12 @@ const ContactsMain: React.FC = () => {
 							>
 								+7 (495) 269-85-54
 							</a>
-							<Link
-								href={'/'}
+							<a
+								href='mailto:tae@abrail.ru'
 								className='text-primary-red hover:underline underline-offset-2 text-lg'
 							>
 								tae@abrail.ru
-							</Link>
+							</a>
 						</div>
 					</div>
 				)

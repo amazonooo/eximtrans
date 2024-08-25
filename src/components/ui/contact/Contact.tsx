@@ -63,15 +63,18 @@ const Contact: FC<IContact> = ({ title, image, name, desc, link, email, phone, d
 									{desc}
 								</p>
 								<div className='flex flex-col md:flex-row gap-5 items-center justify-center'>
-									<Link
-										href={link}
+									<a
+										href={`mailto:${link}`}
 										className='text-primary-red hover:underline'
 									>
 										{link}
-									</Link>
-									<Link href={'/'} className='text-primary-red hover:underline'>
+									</a>
+									<a
+										href={`tel:${phone}`}
+										className='text-primary-red hover:underline'
+									>
 										{phone}
-									</Link>
+									</a>
 								</div>
 							</motion.div>
 						</div>
@@ -103,18 +106,18 @@ const Contact: FC<IContact> = ({ title, image, name, desc, link, email, phone, d
 										{desc2}
 									</p>
 									<div className='flex flex-col md:flex-row gap-5 items-center justify-center'>
-										<Link
-											href={link2}
+										<a
+											href={`mailto:${link2}`}
 											className='text-primary-red hover:underline'
 										>
 											{link2}
-										</Link>
-										<Link
-											href={'/'}
+										</a>
+										<a
+											href={`mailto:${phone2}`}
 											className='text-primary-red hover:underline'
 										>
 											{phone2}
-										</Link>
+										</a>
 									</div>
 								</motion.div>
 							</div>
