@@ -5,6 +5,7 @@ import { ScrollTrigger } from 'gsap/ScrollTrigger'
 import { useLayoutEffect } from 'react'
 import { motion } from 'framer-motion'
 import { fadeIn } from '@/utils/motion'
+import Link from 'next/link'
 
 const FooterContact = () => {
 	// gsap.registerPlugin(ScrollTrigger)
@@ -37,11 +38,12 @@ const FooterContact = () => {
 			className='footer-con text-center flex flex-col justify-between h-full'
 		>
 			<div>
-				<p className='text-xl font-semibold'>8 800 775-16-16</p>
+				<Link href={'/'} className='text-xl font-semibold'>
+					+7 (495) 269-85-54
+				</Link>
 				<p className='text-gray-500'>help@pgk.ru</p>
 			</div>
-			<div>Личный кабинет клиента</div>
-			<div>ПГК</div>
+			<div className='text-primary-red'>Эксимтранс</div>
 		</motion.div>
 	)
 }

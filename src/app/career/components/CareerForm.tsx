@@ -51,7 +51,7 @@ export default function CareerForm() {
 			preferredCity: form.preferredCity,
 			direction: form.direction,
 			specialization: form.specialization,
-			resume: form.resume,
+			// resume: form.resume,
 		}
 
 		emailjs
@@ -171,7 +171,7 @@ export default function CareerForm() {
 						placeholder='Специализация'
 					/>
 					<input
-						type='text'
+						type='file'
 						name='resume'
 						value={form.resume}
 						onChange={handleChange}
