@@ -187,6 +187,12 @@ const ContactsMain: React.FC = () => {
 							>
 								+7 (495) 269-85-54
 							</Link>
+							<Link
+								href={'/'}
+								className='text-primary-red hover:underline underline-offset-2 text-lg'
+							>
+								tae@abrail.ru
+							</Link>
 						</div>
 					</div>
 				)

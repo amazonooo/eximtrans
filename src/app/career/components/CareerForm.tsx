@@ -16,12 +16,18 @@ export default function CareerForm() {
 
   const [loading, setLoading] = useState(false)
   const [form, setForm] = useState({
-    name: '',
-    surname: '',
-    email: '',
-    phone: '',
-    city: '',
-  })
+		name: '',
+		surname: '',
+		patronymic: '',
+		email: '',
+		phone: '',
+		city: '',
+		cityEmployment: '',
+		preferredCity: '',
+		direction: '',
+		specialization: '',
+		resume: '',
+	})
 
   const handleChange = (e: any) => {
     const { name, value } = e.target
@@ -33,33 +39,47 @@ export default function CareerForm() {
     e.preventDefault()
     setLoading(true)
 
+		const templateParams = {
+			from_name: form.name,
+			surname: form.surname,
+			patronymic: form.patronymic,
+			email: form.email,
+			phone: form.phone,
+			city: form.city,
+			cityEmployment: form.cityEmployment,
+			preferredCity: form.preferredCity,
+			direction: form.direction,
+			specialization: form.specialization,
+			resume: form.resume,
+		}
+
     emailjs.send(
 			'service_aixfu79',
 			'template_i5vpd6d',
-			{
-				from_name: form.name,
-				to_name: 'Garik',
-				from_email: form.email,
-				to_email: 'garikogannisyan.9@gmail.com',
-			},
+			templateParams,
 			'1wcWUQA2CLAzji-jz'
 		)
-    .then(() => {
+    .then(
+      (response) => {
+				setLoading(false);
+				alert('Форма успешно отправлена!');
+				setForm({
+					name: '',
+					surname: '',
+					patronymic: '',
+					email: '',
+					phone: '',
+					city: '',
+					cityEmployment: '',
+					preferredCity: '',
+					direction: '',
+					specialization: '',
+					resume: '',
+				});
+    	}, (error) => {
       setLoading(false)
-      alert('Thank you')
-      setForm({
-				name: '',
-				surname: '',
-				email: '',
-				phone: '',
-				city: '',
-			})
-    }, (error) => {
-      setLoading(false)
-
-      console.log(error)
-
-      alert('Something went wrong')
+			console.error('Ошибка при отправке:', error)
+			alert('Произошла ошибка при отправке формы.')
     })
   }
 
@@ -108,59 +128,82 @@ export default function CareerForm() {
 					name='name'
 					value={form.name}
 					onChange={handleChange}
-					placeholder='Name'
-					className='focus:outline-primary-red outline-none rounded-lg w-full p-3 min-w-[300px] sm:min-w-[450px] md:min-w-[300px] lg:min-w-[360px] xl:min-w-[560px] transition-all duration-300'
+					placeholder='Имя'
 				/>
 				<input
 					type='text'
 					name='surname'
 					value={form.surname}
 					onChange={handleChange}
-					placeholder='Surname'
-					className='focus:outline-primary-red outline-none rounded-lg w-full p-3 min-w-[300px] sm:min-w-[450px] md:min-w-[300px] lg:min-w-[360px] xl:min-w-[560px] transition-all duration-300'
+					placeholder='Фамилия'
+				/>
+				<input
+					type='text'
+					name='patronymic'
+					value={form.patronymic}
+					onChange={handleChange}
+					placeholder='Отчество'
 				/>
 				<input
 					type='email'
 					name='email'
 					value={form.email}
 					onChange={handleChange}
-					placeholder='Email'
-					className='focus:outline-primary-red outline-none rounded-lg w-full p-3 min-w-[300px] sm:min-w-[450px] md:min-w-[300px] lg:min-w-[360px] xl:min-w-[560px] transition-all duration-300'
+					placeholder='Электронная почта'
 				/>
 				<input
 					type='tel'
-					name='tel'
+					name='phone'
 					value={form.phone}
 					onChange={handleChange}
-					placeholder='Phone'
-					className='focus:outline-primary-red outline-none rounded-lg w-full p-3 min-w-[300px] sm:min-w-[450px] md:min-w-[300px] lg:min-w-[360px] xl:min-w-[560px] transition-all duration-300'
+					placeholder='Телефон'
 				/>
 				<input
 					type='text'
 					name='city'
 					value={form.city}
 					onChange={handleChange}
-					placeholder='City'
-					className='focus:outline-primary-red outline-none rounded-lg w-full p-3 min-w-[300px] sm:min-w-[450px] md:min-w-[300px] lg:min-w-[360px] xl:min-w-[560px] transition-all duration-300'
+					placeholder='Город фактического проживания'
 				/>
-
-				{/* <textarea
-					rows={7}
-					name='message'
-					value={form.message}
+				<input
+					type='text'
+					name='cityEmployment'
+					value={form.cityEmployment}
 					onChange={handleChange}
-					placeholder='What do you want to say?'
-				></textarea> */}
-				<div className='mt-10 lg:mt-20 flex items-center justify-center font-medium'>
-					<button
-						type='submit'
-						disabled={loading}
-						className='bg-white cursor-pointer border border-primary text-center px-8 py-5 rounded-xl hover:bg-primary-red hover:text-white transition-colors duration-500 disabled:cursor-not-allowed disabled:bg-neutral-200'
-					>
-						Отправить анкету
-					</button>
-				</div>
+					placeholder='Город фактического проживания (ещё раз)'
+				/>
+				<input
+					type='text'
+					name='preferredCity'
+					value={form.preferredCity}
+					onChange={handleChange}
+					placeholder='Предпочтительный город присутствия Экспимтранс'
+				/>
+				<input
+					type='text'
+					name='direction'
+					value={form.direction}
+					onChange={handleChange}
+					placeholder='Направление'
+				/>
+				<input
+					type='text'
+					name='specialization'
+					value={form.specialization}
+					onChange={handleChange}
+					placeholder='Специализация'
+				/>
+				<textarea
+					name='resume'
+					value={form.resume}
+					onChange={handleChange}
+					placeholder='Резюме'
+				></textarea>
+
 			</form>
+				<button type='submit' className='text-center w-fit' disabled={loading}>
+					{loading ? 'Отправка...' : 'Отправить анкету'}
+				</button>
 		</div>
 	)
 }
