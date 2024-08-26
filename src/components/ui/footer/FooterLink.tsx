@@ -10,7 +10,7 @@ const FooterLink = ({ href, text, isGray }: FooterLinkProps) => {
 	return (
 		<Link href={href} legacyBehavior>
 			<a
-				className='text-base hover:underline-offset-4 hover:underline'
+				className='text-base hover:text-primary-red transition-colors duration-300'
 			>
 				{text}
 			</a>

@@ -25,7 +25,7 @@ export const servicesData = [
 		id: '3',
 		title: 'Продажа запчастей и металлолома',
 		image: '/shesterenki.jpg',
-		href: '/',
+		href: '/prodazha-metal',
 		anim: '3',
 	},
 	{

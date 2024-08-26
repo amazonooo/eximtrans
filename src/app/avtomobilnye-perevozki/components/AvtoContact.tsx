@@ -4,7 +4,7 @@ import { FC } from 'react'
 const AvtoContact: FC = () => {
   return (
 		<Contact
-			title='Присылайте ваши предложения по предоставлению подвижного состава в аренду по указанным ниже контактам'
+			title='Контакты'
 			name='Комаров Сергей Алексеевич'
 			image='/ava-2.jpg'
 			link='sergey240980@mail.ru'

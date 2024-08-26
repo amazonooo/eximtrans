@@ -11,11 +11,11 @@ const AboutHero: FC = () => {
 		<motion.section
 			initial='hidden'
 			animate='visible'
-			className='flex flex-col items-center justify-center mt-16 lg:mt-36 w-full mb-24 md:mb-36'
+			className='flex flex-col items-center justify-center mt-16 lg:mt-36 w-full mb-10 md:mb-24'
 		>
 			<motion.div
 				style={{
-					backgroundImage: 'url(/hero-1.jpg)',
+					backgroundImage: 'url(/hero-6.png)',
 				}}
 				className='bg-no-repeat bg-cover bg-center w-full h-[600px]'
 				variants={slideInFromLeft(0.6)}

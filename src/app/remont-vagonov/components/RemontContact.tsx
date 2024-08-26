@@ -4,7 +4,7 @@ import { FC } from 'react'
 const RemontContact: FC = () => {
   return (
 		<Contact
-			title='Присылайте ваши предложения по предоставлению подвижного состава в аренду по указанным ниже контактам'
+			title='Контакты'
 			name='ТР Мамедов Али Бабашохович'
 			phone='+7 (495) 269-85-54'
 			email='mamedov@abrail.ru'

@@ -134,7 +134,7 @@ export default function GlobeComponent() {
 							{selectedCity.phone}
 						</p>
 						<p className='text-sm md:text-base'>{selectedCity.address}</p>
-						<a href={`mailto:${selectedCity.email}`}>{selectedCity.email}</a>
+						<a className='hover:text-neutral-300 transition-colors duration-300' href={`mailto:${selectedCity.email}`}>{selectedCity.email}</a>
 					</div>
 				</motion.div>
 			</div>

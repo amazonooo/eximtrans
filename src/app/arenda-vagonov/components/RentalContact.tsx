@@ -5,7 +5,7 @@ const RentalContact: FC = () => {
   return (
 		<Contact
 			key={1}
-			title='Присылайте ваши предложения по предоставлению подвижного состава в аренду по указанным ниже контактам'
+			title='Контакты'
 			image='/ava.jpg'
 			name='Белова Людмила Александровна'
 			link='ShaikoNaN@PGK.RU'

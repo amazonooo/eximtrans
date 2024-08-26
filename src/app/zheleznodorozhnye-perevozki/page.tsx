@@ -1,4 +1,5 @@
 import RentalLink from '../arenda-vagonov/components/RentalLink'
+import ProdazhaContact from '../prodazha-metal/components/ProdazhaContact'
 import Gruz from './components/Gruz'
 import PerevozAdvantages from './components/PerevozAdvantages'
 import PerevozHero from './components/PerevozHero'
@@ -12,6 +13,7 @@ export default function ZhelPerevozPage() {
         <PerevozTop />
         <PerevozAdvantages />
         <Gruz />
+				<ProdazhaContact />
 				<RentalLink />
 			</div>
 		</main>
