@@ -15,7 +15,7 @@ const RentalHero: FC = () => {
 		>
 			<motion.div
 				style={{
-					backgroundImage: 'url(/arenda-vagonov.jpg)',
+					backgroundImage: 'url(/hero-5.png)',
 				}}
 				className='bg-no-repeat bg-cover bg-center w-full h-[600px]'
 				variants={slideInFromLeft(0.6)}

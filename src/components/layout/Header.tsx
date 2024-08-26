@@ -110,7 +110,7 @@ export const Header = ({
 							duration: 0.2,
 						}}
 						className={cn(
-							'max-w-fit md:min-w-[40vw] lg:min-w-[70vw] 2xl:min-w-[81vw] mx-auto fixed z-[5000] inset-x-0 xl:px-10 lg:px-5 py-4 rounded-lg border border-white/[0.2] bg-white',
+							'max-w-fit md:min-w-[40vw] lg:min-w-[55vw] 2xl:min-w-[51vw] mx-auto fixed z-[5000] inset-x-0 xl:px-10 lg:px-5 py-4 rounded-lg border border-white/[0.2] bg-white',
 							className
 						)}
 					>
@@ -143,7 +143,7 @@ export const Header = ({
 									</Link>
 								))}
 							</li>
-							<div className='flex justify-between items-center lg:gap-x-4 xl:gap-x-6'>
+							{/* <div className='flex justify-between items-center lg:gap-x-4 xl:gap-x-6'>
 								<Link
 									className={cn('relative items-center  flex space-x-1')}
 									href={'/'}
@@ -151,7 +151,7 @@ export const Header = ({
 									<User2 />
 								</Link>
 								<MenuIcon />
-							</div>
+							</div> */}
 						</ul>
 					</motion.div>
 				</AnimatePresence>

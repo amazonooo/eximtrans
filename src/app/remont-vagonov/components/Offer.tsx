@@ -49,7 +49,7 @@ const Offer: FC = () => {
 					</motion.li>
 				</ul>
 				<Image
-					src={'/remont-1.jpg'}
+					src={'/remont.png'}
 					alt='remont-1'
 					width={600}
 					height={200}

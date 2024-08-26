@@ -15,7 +15,7 @@ const AutoHero: FC = () => {
 		>
 			<motion.div
 				style={{
-					backgroundImage: 'url(/zhelperevoz-hero.jpg)',
+					backgroundImage: 'url(/hero-4.png)',
 				}}
 				className='bg-no-repeat bg-cover bg-center w-full h-[650px]'
 				variants={slideInFromLeft(0.6)}

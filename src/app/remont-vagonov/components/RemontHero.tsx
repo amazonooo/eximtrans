@@ -15,7 +15,7 @@ const RemontHero: FC = () => {
 		>
 			<motion.div
 				style={{
-					backgroundImage: 'url(/remont-hero.jpg)',
+					backgroundImage: 'url(/hero-7.png)',
 				}}
 				className='bg-no-repeat bg-cover bg-center w-full h-[750px]'
 				variants={slideInFromLeft(0.6)}

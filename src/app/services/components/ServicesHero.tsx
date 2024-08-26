@@ -15,7 +15,7 @@ const ServicesHero: FC = () => {
 		>
 			<motion.div
 				style={{
-					backgroundImage: 'url(/services-hero.jpg)',
+					backgroundImage: 'url(/hero-2.jpg)',
 				}}
 				className='bg-no-repeat bg-cover bg-center w-full h-[600px]'
 				variants={slideInFromLeft(0.6)}
