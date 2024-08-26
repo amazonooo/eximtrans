@@ -4,6 +4,7 @@ import { useRef, useState } from 'react'
 import { toast, ToastContainer } from 'react-toastify'
 import emailjs from '@emailjs/browser'
 import 'react-toastify/dist/ReactToastify.css'
+import { Upload } from 'lucide-react'
 
 export default function CareerForm() {
 	const formRef = useRef<HTMLFormElement>(null)
@@ -21,6 +22,13 @@ export default function CareerForm() {
 		specialization: '',
 		resume: '',
 	})
+
+	const handleFileChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+		if (e.target.files && e.target.files[0]) {
+			const file = e.target.files[0]
+			setForm({ ...form, resume: file.name }) // Или можно сохранять сам файл
+		}
+	}
 
 	const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
 		const { name, value } = e.target
@@ -51,7 +59,7 @@ export default function CareerForm() {
 			preferredCity: form.preferredCity,
 			direction: form.direction,
 			specialization: form.specialization,
-			// resume: form.resume,
+			resume: form.resume,
 		}
 
 		emailjs
@@ -172,12 +180,21 @@ export default function CareerForm() {
 					/>
 					<input
 						type='file'
+						id='resume'
 						name='resume'
-						value={form.resume}
-						onChange={handleChange}
-						className='focus:outline-primary-red outline-none rounded-lg w-full p-3 min-w-[300px] sm:min-w-[450px] md:min-w-[300px] lg:min-w-[360px] xl:min-w-[560px] transition-all duration-300'
-						placeholder='Резюме'
+						onChange={handleFileChange}
+						className='hidden'
 					/>
+					<label
+						htmlFor='resume'
+						className='bg-primary-red hover:bg-primary-red/70 text-white font-bold py-2 px-4 rounded-lg cursor-pointer flex items-center justify-between'
+					>
+						<span>Загрузить резюме</span>
+						<Upload />
+					</label>
+					<span className='ml-2 text-gray-700'>
+						{form.resume || 'Файл не выбран'}
+					</span>
 				</div>
 				<div className='mt-10 lg:mt-20 font-medium w-full flex items-center justify-center'>
 					<button

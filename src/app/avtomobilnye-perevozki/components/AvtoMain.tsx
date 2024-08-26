@@ -12,7 +12,7 @@ import SectionTitle from '@/components/ui/section-title/SectionTitle'
 const AvtoMain: FC = () => {
   return (
 		<section className='flex flex-col items-center justify-center mb-24 md:mb-36 px-5 sm:px-10 md:px-15 lg:px-28 xl:px-[182.5px]'>
-			<SectionTitle text='Преимущества' />
+			<SectionTitle text='Наши преимущества' />
 			<div className='grid grid-cols-1 md:grid-cols-2 gap-5'>
 				{avtoData.map(card => (
 					<AvtoCard
