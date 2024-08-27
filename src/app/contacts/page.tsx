@@ -1,6 +1,12 @@
 import GlobeComponent from '@/components/layout/Geography'
 import ContactsHero from './components/ContactsHero'
 import ContactsMain from './components/ContactsMain'
+import { Metadata } from 'next'
+
+export const metadata: Metadata = {
+	title: 'Контакты',
+	description: 'Наши офисы, контакты под услуги.',
+}
 
 export default function ContactsPage() {
   return (

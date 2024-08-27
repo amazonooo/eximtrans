@@ -1,6 +1,12 @@
+import { Metadata } from 'next'
 import CareerAnket from './components/CareerAnket'
 import CareerHero from './components/CareerHero'
 import CareerText from './components/CareerText'
+
+export const metadata: Metadata = {
+	title: 'Карьера',
+	description: 'Адресы наших офисов и вакансии.',
+}
 
 export default function CareerPage() {
   return (

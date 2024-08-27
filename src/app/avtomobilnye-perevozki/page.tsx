@@ -1,8 +1,15 @@
+import { Metadata } from 'next'
 import RentalLink from '../arenda-vagonov/components/RentalLink'
 import AvtoContact from './components/AvtoContact'
 import AutoHero from './components/AvtoHero'
 import AvtoMain from './components/AvtoMain'
 import AvtoTop from './components/AvtoTop'
+
+export const metadata: Metadata = {
+	title: 'Автомобильные перевозки',
+	description: 'Услуга автомобильных перевозок.',
+}
+
 
 export default function AvtoPerevozPage() {
 	return (

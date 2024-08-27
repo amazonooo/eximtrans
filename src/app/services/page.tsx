@@ -1,6 +1,12 @@
+import { Metadata } from 'next'
 import ServicesCards from './components/ServicesCards'
 import ServicesDesc from './components/ServicesDesc'
 import ServicesHero from './components/ServicesHero'
+
+export const metadata: Metadata = {
+	title: 'Услуги',
+	description: 'Услуги, предоствавляемые нашей компанией.',
+}
 
 export default function SercicesPage() {
   return (
