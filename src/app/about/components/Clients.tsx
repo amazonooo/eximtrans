@@ -1,5 +1,3 @@
-'use client'
-
 import React, { useEffect, useState } from 'react'
 import { InfiniteMovingCards } from '@/components/ui/infinite-moving-cards/infinite-moving-cards'
 import Heading from '@/components/ui/heading/Heading'

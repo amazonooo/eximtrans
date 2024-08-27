@@ -6,6 +6,7 @@ import Link from 'next/link'
 import { usePathname } from 'next/navigation'
 import { motion } from 'framer-motion'
 import { fadeIn } from '@/utils/motion'
+import Image from 'next/image'
 
 const cities = [
 	{
@@ -108,7 +109,7 @@ export default function GlobeComponent() {
 					viewport={{ once: true, amount: 0.4 }}
 					className='relative h-[300px] w-[300px] sm:w-[500px] sm:h-[500px] md:w-[700px] md:h-[700px] lg:w-[800px] lg:h-[800px]'
 				>
-					<img src='/planet.png' alt='Planet' className='w-full h-full' />
+					<Image src={'/planet.png'} alt='Planet' className='w-full h-full' width={800} height={800} />
 
 					{/* Rotating Circle */}
 
