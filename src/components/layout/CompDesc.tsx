@@ -19,7 +19,7 @@ const CompDesc: FC = () => {
 			className='flex flex-col items-center justify-center mb-24 md:mb-36 md:px-15 lg:px-28 xl:px-[182.5px]'
 		>
 			<Heading
-				text='Крупнейший частный оператор грузовых железнодорожных перевозок России'
+				text='Крупный частный оператор грузовых железнодорожных перевозок России'
 				className='sect max-w-[1000px]'
 			/>
 			<div className='sect-box pt-12 md:pt-16'>

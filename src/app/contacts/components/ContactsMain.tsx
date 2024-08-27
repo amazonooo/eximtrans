@@ -110,7 +110,7 @@ const ContactsMain: React.FC = () => {
 								</a>
 							</div>
 						</div>
-						<div className='mt-6 flex flex-col'>
+						{/* <div className='mt-6 flex flex-col'>
 							<h2 className='text-center text-lg lg:text-2xl xl:text-3xl'>
 								Мамедов Али Бабашахович
 							</h2>
@@ -128,13 +128,13 @@ const ContactsMain: React.FC = () => {
 									mamedov@abrail.ru{' '}
 								</a>
 							</div>
-						</div>
+						</div> */}
 					</div>
 				)
 			case 'Ремонт вагонов':
 				return (
 					<div className='flex flex-col md:flex-row gap-x-12 gap-y-5'>
-						<div className='mt-6 flex flex-col'>
+						{/* <div className='mt-6 flex flex-col'>
 							<h2 className='text-center text-lg lg:text-2xl xl:text-3xl'>
 								Тетнев Александр Евгеньевич
 							</h2>
@@ -152,7 +152,7 @@ const ContactsMain: React.FC = () => {
 									tae@abrail.ru
 								</a>
 							</div>
-						</div>
+						</div> */}
 						<div className='mt-6 flex flex-col'>
 							<h2 className='text-center text-lg lg:text-2xl xl:text-3xl'>
 								Мамедов Али Бабашахович

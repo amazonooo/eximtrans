@@ -127,7 +127,7 @@ export default function GlobeComponent() {
 						/>
 					))}
 					{/* City Information */}
-					<div className='text-black absolute -bottom-16 left-3 sm:bottom-1/4 sm:-translate-y-1/4 sm:left-[35%] sm:text-white'>
+					<div className='text-black absolute -bottom-16 left-3 sm:bottom-1/4 sm:-translate-y-1/4 sm:left-[28%] sm:text-white'>
 						<h2 className='text-lg sm:text-2xl md:text-4xl font-semibold'>
 							{selectedCity.name}
 						</h2>

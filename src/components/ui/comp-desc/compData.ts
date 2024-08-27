@@ -2,7 +2,7 @@ export const compData = [
 	{
 		id: '1',
 		title: 'Вагонный парк',
-		count: 10000,
+		count: 7000,
 		desc: 'вагонов',
 	},
 	{
@@ -14,7 +14,7 @@ export const compData = [
 	{
 		id: '3',
 		title: 'Клиенты',
-		count: 500,
+		count: 100,
 		desc: 'компаний доверяют нам свои грузы',
 	},
 ]

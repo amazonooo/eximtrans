@@ -6,7 +6,7 @@ const AvtoTop: FC = () => {
   return (
 		<section className='flex flex-col items-center justify-center mb-24 md:mb-36 px-5 sm:px-10 md:px-15 lg:px-28 xl:px-[182.5px]'>
 			<h2 className='text-xl md:text-2xl text-left md:text-center'>
-				<span className='text-primary-red'>Эксмтранс</span> — ваш надежный
+				<span className='text-primary-red'>Эксимтранс</span> — ваш надежный
 				партнер в сфере автомобильных грузоперевозок по России. Мы
 				специализируемся на доставке цемента, предлагая универсальные решения
 				для любых объемов и расстояний. С нами вы можете быть уверены в

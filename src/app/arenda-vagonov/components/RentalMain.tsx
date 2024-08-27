@@ -17,7 +17,7 @@ const RentalMain: FC = () => {
 			>
 				<h2 className='text-3xl text-center'>
 					<span className='text-primary-red font-semibold'>Эксимтранс</span>{' '}
-					готов выслушать ваши предложения по аренде вагонов, такие как:{' '}
+					готов рассмотреть ваши предложения по аренде вагонов, таких как:{' '}
 				</h2>
 				<div className='mt-12 md:mt-14 mb-24 md:mb-28 flex items-center justify-center'>
 					<div className='grid grid-cols-1 md:grid-cols-2 gap-x-3 gap-y-4'>

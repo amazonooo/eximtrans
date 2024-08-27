@@ -29,7 +29,7 @@ const Hero: FC = () => {
 				<div className='absolute top-0 left-0 w-full h-full bg-[rgba(0,0,0,.3)]' />
 				<div className='absolute bottom-6 md:top-6 md:right-6'>
 					<p className='text-neutral-300'>
-						Железнодорожные и грузовые перевозки грузов
+						Железнодорожные и автомобильные перевозки грузов
 					</p>
 				</div>
 				<div className='w-full h-full flex justify-center'>

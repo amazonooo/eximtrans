@@ -10,7 +10,7 @@ export const avtoData: IAvtoData[] = [
 	{
 		id: '1',
 		IconComponent: Truck,
-		text: 'Новые автомобили, работающие на дизели и на СУГ',
+		text: 'Новые автомобили, работающие на дизели, а также на СПГ (LNG)',
 	},
 	{
 		id: '2',
