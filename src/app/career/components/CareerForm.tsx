@@ -26,7 +26,7 @@ export default function CareerForm() {
 	const handleFileChange = (e: React.ChangeEvent<HTMLInputElement>) => {
 		if (e.target.files && e.target.files[0]) {
 			const file = e.target.files[0]
-			setForm({ ...form, resume: file.name }) // Или можно сохранять сам файл
+			setForm({ ...form, resume: file.name })
 		}
 	}
 
@@ -38,7 +38,6 @@ export default function CareerForm() {
 	const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
 		e.preventDefault()
 
-		// Проверка на заполнение всех полей
 		const isFormComplete = Object.values(form).every(
 			field => field.trim() !== ''
 		)

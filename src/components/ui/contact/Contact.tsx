@@ -26,7 +26,7 @@ const Contact: FC<IContact> = ({ title, image, name, desc, link, email, phone })
 		<section className='flex flex-col mb-16 md:mb-24 w-full'>
 			<div className='w-full h-auto bg-white'>
 				<div className='flex items-center justify-center px-4 py-8'>
-					<div className='flex flex-col gap-y-16'>
+					<div className='flex flex-col'>
 						<SectionTitle text={title} className='max-w-[1000px]' />
 						<div className='flex flex-col items-center md:flex-row gap-y-6 justify-center gap-x-8'>
 							{/* <motion.div

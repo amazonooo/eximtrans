@@ -5,10 +5,10 @@ const ProdazhaContact: FC = () => {
 	return (
 		<Contact
 			title='Контакты'
-			name='ДР Тетнев Александр Евгеньевич'
-			phone='+7 (495) 269-85-54'
-			email='mamedov@abrail.ru'
-			link='tae@abrail.ru'
+			name='Дмитрий Шелякин'
+			phone='+7 (999) 545-05-35'
+			email='shelyakin@abrail.ru'
+			link='shelyakin@abrail.ru'
 			image='/ava-2.jpg'
 		/>
 	)

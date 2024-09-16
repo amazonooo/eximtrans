@@ -110,7 +110,7 @@ export const Header = ({
 							duration: 0.2,
 						}}
 						className={cn(
-							'max-w-fit md:min-w-[40vw] lg:min-w-[55vw] 2xl:min-w-[51vw] mx-auto fixed z-[5000] inset-x-0 xl:px-10 lg:px-5 py-4 rounded-lg border border-white/[0.2] bg-white',
+							'max-w-fit md:min-w-[40vw] lg:min-w-[55vw] 2xl:min-w-[51vw] mx-auto fixed z-[5000] inset-x-0 xl:px-10 lg:px-5 py-4 rounded-lg border border-primary-red/30 bg-white',
 							className
 						)}
 					>
