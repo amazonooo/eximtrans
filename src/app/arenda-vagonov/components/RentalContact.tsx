@@ -11,8 +11,6 @@ const RentalContact: FC = () => {
 			link='ShaikoNaN@PGK.RU'
 			email='ShaikoNaN@PGK.RU'
 			phone='+7 (495) 269-85-54'
-			image2='/'
-			link2=''
 		/>
 	)
 }
