@@ -7,11 +7,17 @@ import Footer from '@/components/layout/Footer'
 import ScrollToTop from '@/components/layout/ScrollToTop'
 
 export const metadata: Metadata = {
+	// metadataBase: new URL('https://'),
+	// alternates: {
+	// 	canonical: new URL('https://profpol.online'),
+	// },
 	title: {
 		default: 'Эксимтранс',
 		template: '%s | Эксимтранс',
 	},
-	description: 'Эксимтранс - грузоперевозки по РФ и в другие страны. Собственный вагонный парк. Круглосуточный диспетчерский центр.',
+	description:
+		'Эксимтранс - грузоперевозки по РФ и в другие страны. Собственный вагонный парк. Круглосуточный диспетчерский центр.',
+	creator: 'Eximtrans Team',
 	robots: {
 		index: true,
 		follow: true,
