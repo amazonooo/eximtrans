@@ -1,10 +1,28 @@
+'use client'
+
 import Image from 'next/image'
 import FooterContact from '../ui/footer/FooterContact'
 import FooterItems from '../ui/footer/FooterItems'
 import FooterLogo from '../ui/footer/FooterLogo'
 import FooterInfo from '../ui/footer/FooterInfo'
+import { usePathname } from 'next/navigation'
 
 const Footer = () => {
+	const pathname = usePathname()
+
+	const isNotFoundPage =
+		pathname !== '/' &&
+		pathname !== '/about' &&
+		pathname !== 'arenda-vagonov' &&
+		pathname !== '/avtomobilnye-perevozki' &&
+		pathname !== '/career' &&
+		pathname !== '/contacts' &&
+		pathname !== '/prodazha-metal' &&
+		pathname !== '/services' &&
+		pathname !== '/zheleznodorozhnye-perevozki'
+
+	if (isNotFoundPage) return null
+
 	return (
 		<footer className='pt-8 pb-3 px-5 sm:px-10 border-t border-t-white/90 shadow-2xl'>
 			<div className='container mx-auto grid grid-cols-1 md:grid-cols-3 gap-8'>

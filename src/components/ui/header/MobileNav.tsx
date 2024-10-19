@@ -12,7 +12,7 @@ const MobileNav: FC = () => {
   const [isHovered, setIsHovered] = useState(false)
 
   return (
-		<header className='pt-5 px-5 sm:px-10 h-full'>
+		<div className='pt-5 px-5 sm:px-10 h-full'>
 			<nav className='flex items-center justify-between h-full'>
 				<Link href={'/'} className='z-[1000]'>
 					<Image src={'/logo.png'} alt='logo' width={140} height={140} />
@@ -44,7 +44,7 @@ const MobileNav: FC = () => {
 					</motion.div>
 				)}
 			</AnimatePresence>
-		</header>
+		</div>
 	)
 }
 

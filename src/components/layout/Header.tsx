@@ -93,6 +93,10 @@ export const Header = ({
 	// 	}
 	// }, [])
 
+	const isNotFoundPage = pathname !== '/' && pathname !== '/about' && pathname !== 'arenda-vagonov' && pathname !== '/avtomobilnye-perevozki' && pathname !== '/career' && pathname !== '/contacts' && pathname !== '/prodazha-metal' && pathname !== '/services' && pathname !== '/zheleznodorozhnye-perevozki'
+
+	if (isNotFoundPage) return null
+ 
 	return (
 		<header>
 			{isDesktop && (

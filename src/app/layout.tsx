@@ -7,17 +7,27 @@ import Footer from '@/components/layout/Footer'
 import ScrollToTop from '@/components/layout/ScrollToTop'
 
 export const metadata: Metadata = {
-	// metadataBase: new URL('https://'),
-	// alternates: {
-	// 	canonical: new URL('https://profpol.online'),
-	// },
+	metadataBase: new URL('https://eximtrans.'),
+	alternates: {
+		canonical: new URL('https://eximtrans.'),
+	},
 	title: {
 		default: 'Эксимтранс',
 		template: '%s | Эксимтранс',
 	},
 	description:
 		'Эксимтранс - грузоперевозки по РФ и в другие страны. Собственный вагонный парк. Круглосуточный диспетчерский центр.',
-	creator: 'Eximtrans Team',
+	openGraph: {
+		title: 'Эксимтранс',
+		description:
+			'Эксимтранс - грузоперевозки по РФ и в другие страны. Собственный вагонный парк. Круглосуточный диспетчерский центр.',
+		images: 'https://eximrtans./images/og-image.jpg',
+		type: 'website',
+		locale: 'en_US',
+		url: 'https://eximrtans.ru',
+		siteName: 'Эксимтранс',
+	},
+	creator: 'amazonooo',
 	robots: {
 		index: true,
 		follow: true,
