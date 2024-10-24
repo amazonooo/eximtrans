@@ -63,7 +63,7 @@ export default function CareerForm() {
 
 		emailjs
 			.send(
-				'service_aixfu79',
+				'service_upo58vq',
 				'template_i5vpd6d',
 				templateParams,
 				'1wcWUQA2CLAzji-jz'
