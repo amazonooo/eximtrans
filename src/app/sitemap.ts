@@ -3,7 +3,7 @@ import { MetadataRoute } from 'next'
 export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
 	return [
 		{
-			url: 'https://eximtrans.',
+			url: 'https://exim-trans.ru',
 			lastModified: new Date(),
 		},
 	]

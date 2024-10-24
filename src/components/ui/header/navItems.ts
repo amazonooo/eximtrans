@@ -1,8 +1,8 @@
 export const navItems = [
-	{ name: 'О компании', link: '/about' },
-	{ name: 'Услуги', link: '/services' },
-	{ name: 'Карьера', link: '/career' },
-	{ name: 'Контакты', link: '/contacts' },
+	{ name: 'О компании', link: '/about/index.html' },
+	{ name: 'Услуги', link: '/services/index.html' },
+	{ name: 'Карьера', link: '/career/index.html' },
+	{ name: 'Контакты', link: '/contacts/index.html' },
 ]
 
 export const navButtons = [

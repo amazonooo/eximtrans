@@ -12,14 +12,14 @@ const Footer = () => {
 
 	const isNotFoundPage =
 		pathname !== '/' &&
-		pathname !== '/about' &&
-		pathname !== 'arenda-vagonov' &&
-		pathname !== '/avtomobilnye-perevozki' &&
-		pathname !== '/career' &&
-		pathname !== '/contacts' &&
-		pathname !== '/prodazha-metal' &&
-		pathname !== '/services' &&
-		pathname !== '/zheleznodorozhnye-perevozki'
+		pathname !== '/about/index.html' &&
+		pathname !== 'arenda-vagonov/index.html' &&
+		pathname !== '/avtomobilnye-perevozki/index.html' &&
+		pathname !== '/career/index.html' &&
+		pathname !== '/contacts/index.html' &&
+		pathname !== '/prodazha-metal/index.html' &&
+		pathname !== '/services/index.html' &&
+		pathname !== '/zheleznodorozhnye-perevozki/index.html'
 
 	if (isNotFoundPage) return null
 
@@ -32,10 +32,10 @@ const Footer = () => {
 				<div className='flex flex-col items-start md:items-center'>
 					<FooterItems
 						links={[
-							{ href: '/services', text: 'Услуги' },
-							{ href: '/about', text: 'О компании' },
-							{ href: '/contacts', text: 'Контакты' },
-							{ href: '/career', text: 'Карьера' },
+							{ href: '/services/index.html', text: 'Услуги' },
+							{ href: '/about/index.html', text: 'О компании' },
+							{ href: '/contacts/index.html', text: 'Контакты' },
+							{ href: '/career/index.html', text: 'Карьера' },
 						]}
 					/>
 				</div>
@@ -44,7 +44,7 @@ const Footer = () => {
 				</div>
 			</div>
 			<div className='mt-12 text-center text-sm text-gray-500'>
-					<FooterInfo />
+				<FooterInfo />
 			</div>
 		</footer>
 	)

@@ -7,9 +7,9 @@ import Footer from '@/components/layout/Footer'
 import ScrollToTop from '@/components/layout/ScrollToTop'
 
 export const metadata: Metadata = {
-	metadataBase: new URL('https://eximtrans.'),
+	metadataBase: new URL('https://exim-trans.ru'),
 	alternates: {
-		canonical: new URL('https://eximtrans.'),
+		canonical: new URL('https://exim-trans.ru'),
 	},
 	title: {
 		default: 'Эксимтранс',
@@ -21,12 +21,30 @@ export const metadata: Metadata = {
 		title: 'Эксимтранс',
 		description:
 			'Эксимтранс - грузоперевозки по РФ и в другие страны. Собственный вагонный парк. Круглосуточный диспетчерский центр.',
-		images: 'https://eximrtans./images/og-image.jpg',
+		images: 'https://exim-trans.ru/images/og-image.jpg',
 		type: 'website',
 		locale: 'en_US',
-		url: 'https://eximrtans.ru',
+		url: 'https://exim-trans.ru',
 		siteName: 'Эксимтранс',
 	},
+	keywords: [
+		'Эксимтранс',
+		'эксимтранс',
+		'Eximtrans',
+		'eximtrans',
+		'Перевозка грузов',
+		'перевозка грузов',
+		'Железнодорожная перевозка',
+		'железнодорожная перевозка',
+		'эксим-транс',
+		'exim-trans',
+		'ремонт вагонов',
+		'продажа металла',
+		'аренда вагонов',
+		'Ремонт вагонов',
+		'Продажа металла',
+		'Аренда вагонов',
+	],
 	creator: 'amazonooo',
 	robots: {
 		index: true,
