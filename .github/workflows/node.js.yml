@@ -28,5 +28,5 @@ jobs:
     - run: npm ci
     - run: npm run build --if-present
     - name: Change Directory
-      run: cd /host/actions-runner/_work/eximtrans/eximtrans
+      run: cd /actions-runner/_work/eximtrans/eximtrans
     - run: pm2 restart 4
