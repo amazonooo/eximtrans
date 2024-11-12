@@ -4,7 +4,6 @@ on:
     branches: [ "master" ]
   pull_request:
     branches: [ "master" ]
-
 jobs:
   build:
     runs-on: self-hosted
@@ -12,28 +11,16 @@ jobs:
       matrix:
         node-version: [20.18.0]
     env:
-      EMAIL_USERNAME: ${{ secrets.EMAIL_USERNAME }}
-      EMAIL_PASS: ${{ secrets.EMAIL_PASS }}
-      NEXT_PUBLIC_BASE_URL: ${{ secrets.NEXT_PUBLIC_BASE_URL }}
-      NEXT_WEBSITE_URL: ${{ secrets.NEXT_WEBSITE_URL }}
+      EMAIL_USERNAME: ${{secrets.EMAIL_USERNAME}}
+      EMAIL_PASS: ${{secrets.EMAIL_PASS}}
+      NEXT_PUBLIC_BASE_URL: ${{secrets.NEXT_PUBLIC_BASE_URL}}
+      NEXT_WEBSITE_URL: ${{secrets.NEXT_WEBSITE_URL}}
     steps:
     - uses: actions/checkout@v4
-
     - name: Use Node.js ${{ matrix.node-version }}
       uses: actions/setup-node@v4
       with:
         node-version: ${{ matrix.node-version }}
         cache: 'npm'
-    
-    - name: Cache npm dependencies
-      uses: actions/cache@v3
-      with:
-        path: ~/.npm
-        key: ${{ runner.os }}-node-${{ hashFiles('**/package-lock.json') }}
-        restore-keys: |
-          ${{ runner.os }}-node-
-
-    - name: Install dependencies
-      run: node --max_old_space_size=4096 $(which npm) ci
-
+    - run: npm install
     - run: npm run build --if-present
