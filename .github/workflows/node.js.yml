@@ -13,7 +13,7 @@ jobs:
 
     strategy:
       matrix:
-        node-version: [22.11.0]
+        node-version: [20.18.0]
     env:
       EMAIL_USERNAME: ${{secrets.EMAIL_USERNAME}}
       EMAIL_PASS: ${{secrets.EMAIL_PASS}}
