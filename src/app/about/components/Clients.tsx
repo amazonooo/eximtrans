@@ -20,45 +20,45 @@ export function InfiniteMovingCardsDemo() {
 
 const testimonials = [
 	{
-		image: '/client-1.jpg',
-	},
-	{
-		image: '/client-2.jpg',
-	},
-	{
 		image: '/client-3.jpg',
 	},
 	{
-		image: '/client-4.jpg',
+		image: '/client-15.png',
 	},
 	{
-		image: '/client-5.jpg',
+		image: '/client-16.png',
 	},
 	{
-		image: '/client-6.jpg',
+		image: '/client-17.png',
 	},
 	{
-		image: '/client-7.jpg',
+		image: '/client-18.png',
 	},
 	{
-		image: '/client-8.jpg',
+		image: '/client-19.jpg',
 	},
 	{
-		image: '/client-9.jpg',
+		image: '/client-20.png',
 	},
 	{
-		image: '/client-10.jpg',
+		image: '/client-21.jpg',
 	},
 	{
-		image: '/client-11.jpg',
+		image: '/client-22.png',
 	},
 	{
-		image: '/client-12.jpg',
+		image: '/client-23.png',
 	},
 	{
-		image: '/client-13.jpg',
+		image: '/client-24.png',
 	},
 	{
-		image: '/client-14.jpg',
+		image: '/client-25.png',
+	},
+	{
+		image: '/client-26.jpg',
+	},
+	{
+		image: '/client-27.jpg',
 	},
 ]

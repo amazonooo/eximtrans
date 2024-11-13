@@ -63,7 +63,7 @@ export default function CareerForm() {
 
 		emailjs
 			.send(
-				'service_aixfu79',
+				'service_upo58vq',
 				'template_i5vpd6d',
 				templateParams,
 				'1wcWUQA2CLAzji-jz'
@@ -96,7 +96,7 @@ export default function CareerForm() {
 	return (
 		<div>
 			<ToastContainer
-				position='top-center'
+				position='top-right'
 				autoClose={3000}
 				limit={3}
 				hideProgressBar={true}
