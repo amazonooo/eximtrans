@@ -14,6 +14,7 @@ import { usePathname, useRouter } from 'next/navigation'
 import { CircleUserRound, LogOut, MenuIcon, User, User2 } from 'lucide-react'
 import { useMediaQuery } from 'react-responsive'
 import MobileNav from '../ui/header/MobileNav'
+import { useScrollDirection } from '@/hooks/useScrollDirection'
 
 export const Header = ({
 	navItems,
@@ -32,20 +33,8 @@ export const Header = ({
 	className?: string
 }) => {
 	const pathname = usePathname()
-
-	// const router = useRouter()
-
-	// const isLoggedLogin = pathname === '/login'
-	// const isLoggedRegister = pathname === '/register'
-
-	// if (isLoggedLogin) return null
-	// if (isLoggedRegister) return null
-
-
-
 	const { scrollYProgress } = useScroll()
 
-	// set true for the initial state so that nav bar is visible in the hero section
 	const [visible, setVisible] = useState(true)
 	const [show, setShow] = useState(false)
 
@@ -70,7 +59,17 @@ export const Header = ({
 	const isDesktop = useMediaQuery({ minWidth: 951 })
 	const isMobile = useMediaQuery({ maxWidth: 950 })
 
-	const [dropdownOpen, setDropdownOpen] = useState(false)
+	const scrollDirection = useScrollDirection()
+	const [isVisible, setIsVisible] = useState(false)
+
+  useEffect(() => {
+		if (scrollDirection === 'up') {
+			setIsVisible(true)
+		} else if (scrollDirection === 'down') {
+			setIsVisible(false)
+		}
+	}, [scrollDirection])
+
 	
 	// const dropdownRef = useRef<HTMLDivElement>(null)
 	// const buttonRef = useRef<HTMLDivElement>(null)
