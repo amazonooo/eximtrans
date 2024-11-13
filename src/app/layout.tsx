@@ -59,6 +59,12 @@ export default function RootLayout({
 }>) {
   return (
 		<html lang='en'>
+			<head>
+				<meta
+					name='google-site-verification'
+					content='1wfPzNCxpgrQFWUrUl82UIcvAZbCKvmNhIDCjPoibcU'
+				/>
+			</head>
 			<body className={`bg-[#F1F2F6] overflow-x-hidden`}>
 				<ScrollToTop />
 				<Header navItems={navItems} navButtons={navButtons} />
