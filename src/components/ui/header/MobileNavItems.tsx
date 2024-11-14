@@ -39,18 +39,18 @@ const MobileNavItems: FC<IMobileMenuItems> = ({ closeMenu }) => {
 			</ul>
 			<ul className='pl-3.5 pr-1 mt-16 flex flex-col gap-y-2'>
 				<li>
-					<Link className='text-lg' href={'/'} onClick={closeMenu}>
+					<a className='text-lg' href='tel:+78007751616' onClick={closeMenu}>
 						8 800 775-16-16
-					</Link>
+					</a>
 				</li>
 				<li>
-					<Link
+					<a
 						className='text-lg text-neutral-400'
-						href={'/'}
+						href={'mailto:info@abrail.ru'}
 						onClick={closeMenu}
 					>
 						info@abrail.ru{' '}
-					</Link>
+					</a>
 				</li>
 			</ul>
 		</AnimatePresence>

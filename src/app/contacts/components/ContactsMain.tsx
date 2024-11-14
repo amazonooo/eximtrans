@@ -54,7 +54,7 @@ const ContactsMain: React.FC = () => {
 							</h2>
 							<div className='flex justify-center mt-4 gap-x-5 flex-col xl:flex-row items-center'>
 								<a
-									href='tel:+74952698554'
+									href='tel:+79995450535'
 									className='text-primary-red hover:underline underline-offset-2 text-lg'
 								>
 									+7 (999) 545-05-35
@@ -67,25 +67,6 @@ const ContactsMain: React.FC = () => {
 								</a>
 							</div>
 						</div>
-						{/* <div className='mt-6 flex flex-col'>
-							<h2 className='text-center text-lg lg:text-2xl xl:text-3xl'>
-								Мамедов Али Бабашахович
-							</h2>
-							<div className='flex justify-center mt-4 gap-x-5 flex-col xl:flex-row items-center'>
-								<a
-									href='tel:+74952698554'
-									className='text-primary-red hover:underline underline-offset-2 text-lg'
-								>
-									+7 (495) 269-85-54
-								</a>
-								<a
-									href='mailto:mamedov@abrail.ru'
-									className='text-primary-red hover:underline underline-offset-2 text-lg'
-								>
-									mamedov@abrail.ru{' '}
-								</a>
-							</div>
-						</div> */}
 					</div>
 				)
 			case 'Продажа запчастей и металлолома':
