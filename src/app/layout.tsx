@@ -5,6 +5,7 @@ import { Header } from '@/components/layout/Header'
 import { navButtons, navItems } from '@/components/ui/header/navItems'
 import Footer from '@/components/layout/Footer'
 import ScrollToTop from '@/components/layout/ScrollToTop'
+import NewHeader from '@/components/layout/NewHeader'
 
 export const metadata: Metadata = {
 	metadataBase: new URL('https://exim-trans.ru'),
@@ -67,7 +68,7 @@ export default function RootLayout({
 			</head>
 			<body className={`bg-[#F1F2F6] overflow-x-hidden`}>
 				<ScrollToTop />
-				<Header navItems={navItems} navButtons={navButtons} />
+				<NewHeader />
 				{children}
 				<Footer />
 			</body>

@@ -1,6 +1,5 @@
 'use client'
 
-import Image from 'next/image'
 import FooterContact from '../ui/footer/FooterContact'
 import FooterItems from '../ui/footer/FooterItems'
 import FooterLogo from '../ui/footer/FooterLogo'

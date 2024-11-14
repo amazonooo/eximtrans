@@ -12,7 +12,7 @@ export function InfiniteMovingCardsDemo() {
 				className='pt-8 md:pt-12'
 				items={testimonials}
 				direction='right'
-				speed='normal'
+				speed='slow'
 			/>
 		</div>
 	)

@@ -1,7 +1,5 @@
 'use client'
 
-import gsap from 'gsap'
-import { ScrollTrigger } from 'gsap/all'
 import { FC, useEffect, useLayoutEffect } from 'react'
 import { servicesData } from '../ui/services/servicesData'
 import ServicesCard from '../ui/services/ServicesCard'
