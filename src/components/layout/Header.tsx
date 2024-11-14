@@ -62,7 +62,7 @@ export const Header = ({
 	const scrollDirection = useScrollDirection()
 	const [isVisible, setIsVisible] = useState(false)
 
-  useEffect(() => {
+	useEffect(() => {
 		if (scrollDirection === 'up') {
 			setIsVisible(true)
 		} else if (scrollDirection === 'down') {
@@ -70,7 +70,6 @@ export const Header = ({
 		}
 	}, [scrollDirection])
 
-	
 	// const dropdownRef = useRef<HTMLDivElement>(null)
 	// const buttonRef = useRef<HTMLDivElement>(null)
 
@@ -92,10 +91,10 @@ export const Header = ({
 	// 	}
 	// }, [])
 
-	const isNotFoundPage = pathname !== '/' && pathname !== '/about' && pathname !== 'arenda-vagonov' && pathname !== '/avtomobilnye-perevozki' && pathname !== '/career' && pathname !== '/contacts' && pathname !== '/prodazha-metal' && pathname !== '/services' && pathname !== '/zheleznodorozhnye-perevozki'
+	const isNotFoundPage = pathname === '/404'
 
 	if (isNotFoundPage) return null
- 
+
 	return (
 		<header>
 			{isDesktop && (
@@ -140,7 +139,13 @@ export const Header = ({
 										<span className='block sm:hidden'>{navItem.icon}</span>
 										{/* add !cursor-pointer */}
 										{/* remove hidden sm:block for the mobile responsive */}
-										<span className={`xl:text-lg font-bold  hover:text-[#930d4bd5] transition-colors duration-300 lg:text-sm !cursor-pointer ${pathname === navItem.link ? 'text-[#930d4bd5]' : 'text-neutral-900'}`}>
+										<span
+											className={`xl:text-lg font-bold  hover:text-[#930d4bd5] transition-colors duration-300 lg:text-sm !cursor-pointer ${
+												pathname === navItem.link
+													? 'text-[#930d4bd5]'
+													: 'text-neutral-900'
+											}`}
+										>
 											{navItem.name}
 										</span>
 									</Link>

@@ -1,7 +1,7 @@
 'use client'
 
 import { Menu, X } from 'lucide-react'
-import { FC, useState } from 'react'
+import { FC, useEffect, useState } from 'react'
 import MobileNavItems from './MobileNavItems'
 import Image from 'next/image'
 import { AnimatePresence, motion } from 'framer-motion'
@@ -10,6 +10,18 @@ import Link from 'next/link'
 const MobileNav: FC = () => {
   const [isOpen, setIsOpen] = useState(false)
   const [isHovered, setIsHovered] = useState(false)
+
+	useEffect(() => {
+		if (isOpen) {
+			document.body.classList.add('overflow-hidden')
+		} else {
+			document.body.classList.remove('overflow-hidden')
+		}
+
+		return () => {
+			document.body.classList.remove('overflow-hidden')
+		}
+	}, [isOpen])
 
   return (
 		<div className='pt-5 px-5 sm:px-10 h-full'>

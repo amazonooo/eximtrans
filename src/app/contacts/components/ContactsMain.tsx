@@ -134,25 +134,6 @@ const ContactsMain: React.FC = () => {
 			case 'Ремонт вагонов':
 				return (
 					<div className='flex flex-col md:flex-row gap-x-12 gap-y-5'>
-						{/* <div className='mt-6 flex flex-col'>
-							<h2 className='text-center text-lg lg:text-2xl xl:text-3xl'>
-								Тетнев Александр Евгеньевич
-							</h2>
-							<div className='flex justify-center mt-4 gap-x-5 flex-col xl:flex-row items-center'>
-								<a
-									href='tel:+74952698554'
-									className='text-primary-red hover:underline underline-offset-2 text-lg'
-								>
-									+7 (495) 269-85-54
-								</a>
-								<a
-									href='mailto:tae@abrail.ru'
-									className='text-primary-red hover:underline underline-offset-2 text-lg'
-								>
-									tae@abrail.ru
-								</a>
-							</div>
-						</div> */}
 						<div className='mt-6 flex flex-col'>
 							<h2 className='text-center text-lg lg:text-2xl xl:text-3xl'>
 								Мамедов Али Бабашахович

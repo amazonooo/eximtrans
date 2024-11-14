@@ -28,7 +28,11 @@ const MobileNavItems: FC<IMobileMenuItems> = ({ closeMenu }) => {
 					</Link>
 				</li>
 				<li>
-					<Link className='text-3xl text-primary-red' href={'/contacts'} onClick={closeMenu}>
+					<Link
+						className='text-3xl text-primary-red'
+						href={'/contacts'}
+						onClick={closeMenu}
+					>
 						Контакты
 					</Link>
 				</li>
@@ -40,8 +44,12 @@ const MobileNavItems: FC<IMobileMenuItems> = ({ closeMenu }) => {
 					</Link>
 				</li>
 				<li>
-					<Link className='text-lg text-neutral-400' href={'/'} onClick={closeMenu}>
-						help@pgk.ru
+					<Link
+						className='text-lg text-neutral-400'
+						href={'/'}
+						onClick={closeMenu}
+					>
+						info@abrail.ru{' '}
 					</Link>
 				</li>
 			</ul>

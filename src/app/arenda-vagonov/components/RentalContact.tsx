@@ -9,7 +9,6 @@ const RentalContact: FC = () => {
 			image='/ava.jpg'
 			name='Белова Людмила Александровна'
 			link='ShaikoNaN@PGK.RU'
-			email='ShaikoNaN@PGK.RU'
 			phone='+7 (495) 269-85-54'
 		/>
 	)

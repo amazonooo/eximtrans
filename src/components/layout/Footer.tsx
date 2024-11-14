@@ -10,16 +10,7 @@ import { usePathname } from 'next/navigation'
 const Footer = () => {
 	const pathname = usePathname()
 
-	const isNotFoundPage =
-		pathname !== '/' &&
-		pathname !== '/about' &&
-		pathname !== 'arenda-vagonov' &&
-		pathname !== '/avtomobilnye-perevozki' &&
-		pathname !== '/career' &&
-		pathname !== '/contacts' &&
-		pathname !== '/prodazha-metal' &&
-		pathname !== '/services' &&
-		pathname !== '/zheleznodorozhnye-perevozki'
+	const isNotFoundPage = pathname === '/404'
 
 	if (isNotFoundPage) return null
 
