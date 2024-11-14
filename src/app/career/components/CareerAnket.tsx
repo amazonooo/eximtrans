@@ -1,9 +1,5 @@
 import Heading from '@/components/ui/heading/Heading'
-import { FC, useRef } from 'react'
-import { inputData } from '@/components/ui/input/inputData'
-import Input from '@/components/ui/input/Input'
-import Link from 'next/link'
-import { toast, ToastContainer } from 'react-toastify'
+import { FC } from 'react'
 import CareerForm from './CareerForm'
 
 const CareerAnket: FC = () => {
@@ -20,12 +16,6 @@ const CareerAnket: FC = () => {
 						<CareerForm />
 					</div>
 				</div>
-				{/* <div className='mt-5 lg:mt-10 flex w-full items-center justify-end'>
-					<input type='checkbox' className='w-7 h-7' />
-					<h2 className='max-w-[450px]'>
-						Подтверждаю согласие с Политикой обработки персональных данных
-					</h2>
-				</div> */}
 			</div>
 		</section>
 	)

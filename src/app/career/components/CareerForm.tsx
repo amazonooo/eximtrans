@@ -1,7 +1,7 @@
 'use client'
 
 import { useRef, useState } from 'react'
-import { toast, ToastContainer } from 'react-toastify'
+import { Slide, toast, ToastContainer } from 'react-toastify'
 import emailjs from '@emailjs/browser'
 import 'react-toastify/dist/ReactToastify.css'
 import { Upload } from 'lucide-react'
@@ -97,11 +97,13 @@ export default function CareerForm() {
 		<div>
 			<ToastContainer
 				position='top-right'
-				autoClose={3000}
+				autoClose={2000}
 				limit={3}
 				hideProgressBar={true}
 				closeOnClick
 				pauseOnHover={false}
+				theme='colored'
+				transition={Slide}
 			/>
 			<form ref={formRef} onSubmit={handleSubmit} className=''>
 				<div className='grid grid-cols-1 md:grid-cols-2 gap-y-4 gap-x-10'>
