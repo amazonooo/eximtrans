@@ -161,12 +161,11 @@ html.has-scroll-dragging {
 }
 
 .Toastify__toast-theme--colored.Toastify__toast--error {
-  background: #7F1D1D !important;
+  background: #A33368 !important;
 }
 
 .Toastify__toast-theme--colored.Toastify__toast--success {
   background: #10b981 !important;
-  border: 1px solid #3A3A3C !important;
 }
 
 @media (max-width: 480px) {
