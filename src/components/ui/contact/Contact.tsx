@@ -29,20 +29,6 @@ const Contact: FC<IContact> = ({ title, image, name, desc, link, email, phone })
 					<div className='flex flex-col'>
 						<SectionTitle text={title} className='max-w-[1000px]' />
 						<div className='flex flex-col items-center md:flex-row gap-y-6 justify-center gap-x-8'>
-							{/* <motion.div
-								variants={fadeIn('right', 'tween', 0.3, 1)}
-								initial='hidden'
-								whileInView='show'
-								viewport={{ once: true, amount: 0.2 }}
-							>
-								<Image
-									className='rounded-full'
-									src={image}
-									alt='ava'
-									width={250}
-									height={250}
-								/>
-							</motion.div> */}
 							<motion.div
 								variants={fadeIn('left', 'tween', 0.3, 1)}
 								initial='hidden'
