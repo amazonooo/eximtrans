@@ -92,7 +92,9 @@ export default function NewHeader() {
 			)}
 
 			{!isDesktop && (
-				<div className={`fixed z-50 top-0 left-0 w-full bg-white shadow-md pb-5 transition-transform duration-300`}>
+				<div className={`fixed z-50 top-0 left-0 w-full bg-white shadow-md pb-3 transition-transform duration-300 ${
+					isVisible ? 'translate-y-0' : '-translate-y-full'
+				}`}>
 					<MobileNav />
 				</div>
 			)}

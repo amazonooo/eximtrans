@@ -9,7 +9,6 @@ import Link from 'next/link'
 
 const MobileNav: FC = () => {
   const [isOpen, setIsOpen] = useState(false)
-  const [isHovered, setIsHovered] = useState(false)
 
 	useEffect(() => {
 		if (isOpen) {
@@ -24,7 +23,7 @@ const MobileNav: FC = () => {
 	}, [isOpen])
 
   return (
-		<div className='pt-5 px-5 sm:px-10 h-full'>
+		<div className='pt-3 px-5 sm:px-10 h-full'>
 			<nav className='flex items-center justify-between h-full'>
 				<Link href={'/'} className='z-[1000]'>
 					<Image src={'/logo.png'} alt='logo' width={140} height={140} />
@@ -50,7 +49,7 @@ const MobileNav: FC = () => {
 							duration: 0.3,
 							ease: 'easeInOut',
 						}}
-						className='fixed top-0 left-0 w-full h-full p-6 bg-white z-[999]'
+						className='fixed top-0 left-0 w-screen h-screen p-6 bg-white z-[999]'
 					>
 						<MobileNavItems closeMenu={() => setIsOpen(false)} />
 					</motion.div>
