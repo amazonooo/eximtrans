@@ -29,18 +29,18 @@ const ContactsMain: React.FC = () => {
 								Комаров Сергей Алексеевич
 							</h2>
 							<div className='flex justify-center mt-4 gap-x-5 flex-col xl:flex-row items-center'>
-								<Link
-									href={'/'}
+								<a
+									href='tel:+79260715695'
 									className='text-primary-red hover:underline underline-offset-2 text-lg'
 								>
 									+7 (926) 071-56-95
-								</Link>
-								<Link
-									href={'/'}
+								</a>
+								<a
+									href='mailto:sergey240980@mail.ru'
 									className='text-primary-red hover:underline underline-offset-2 text-lg'
 								>
 									sergey240980@mail.ru
-								</Link>
+								</a>
 							</div>
 						</div>
 					</div>
