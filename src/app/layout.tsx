@@ -65,6 +65,7 @@ export default function RootLayout({
 					name='google-site-verification'
 					content='1wfPzNCxpgrQFWUrUl82UIcvAZbCKvmNhIDCjPoibcU'
 				/>
+				<meta name='yandex-verification' content='9629f34907b5ed44' />
 			</head>
 			<body className={`bg-[#F1F2F6] overflow-x-hidden`}>
 				<ScrollToTop />
