@@ -66,7 +66,11 @@ export default function RootLayout({
 					content='1wfPzNCxpgrQFWUrUl82UIcvAZbCKvmNhIDCjPoibcU'
 				/>
 				<meta name='yandex-verification' content='9629f34907b5ed44' />
-				<link rel='icon' href='/logo.png' sizes='any' />
+				<meta property='og:image' content='/logo.png' />
+				<meta property='og:image:width' content='1200' />
+				<meta property='og:image:height' content='630' />
+				<link rel='icon' href='/favicon.ico' type='image/x-icon' />
+				<link rel='manifest' href='/site.webmanifest' />
 			</head>
 			<body className={`bg-[#F1F2F6] overflow-x-hidden`}>
 				<ScrollToTop />
