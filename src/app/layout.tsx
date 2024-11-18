@@ -69,6 +69,11 @@ export default function RootLayout({
 				<meta property='og:image' content='/logo.png' />
 				<meta property='og:image:width' content='1200' />
 				<meta property='og:image:height' content='630' />
+				<meta title='Эксимтранс' />
+				<meta
+					name='description'
+					content='Эксимтранс - грузоперевозки по РФ и в другие страны. Собственный вагонный парк. Круглосуточный диспетчерский центр.'
+				/>
 				<link rel='icon' href='/favicon.ico' type='image/x-icon' />
 				<link rel='manifest' href='/site.webmanifest' />
 			</head>
