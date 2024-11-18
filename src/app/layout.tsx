@@ -74,7 +74,7 @@ export default function RootLayout({
 					name='description'
 					content='Эксимтранс - грузоперевозки по РФ и в другие страны. Собственный вагонный парк. Круглосуточный диспетчерский центр.'
 				/>
-				<link rel='icon' href='/favicon.ico' type='image/x-icon' />
+				<link rel='icon' href='./favicon.ico' type='image/x-icon' />
 				<link rel='manifest' href='/site.webmanifest' />
 			</head>
 			<body className={`bg-[#F1F2F6] overflow-x-hidden`}>
