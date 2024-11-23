@@ -69,8 +69,31 @@ export default function RootLayout({
 				<meta property='og:image' content='/logo.png' />
 				<meta property='og:image:width' content='1200' />
 				<meta property='og:image:height' content='630' />
-				<link rel='icon' href='/favicon.ico' type='image/x-icon' />
-				<link rel='manifest' href='/site.webmanifest' />
+				<meta title='Эксимтранс' />
+				<meta
+					name='description'
+					content='Эксимтранс - грузоперевозки по РФ и в другие страны. Собственный вагонный парк. Круглосуточный диспетчерский центр.'
+				/>
+				<link rel='icon' type='image/x-icon' href='/favicon.ico' />
+				<link rel="icon" href="/logo.png" />
+				<link
+					rel='icon'
+					type='image/png'
+					sizes='48x48'
+					href='/favicon-48x48.png'
+				/>
+				<link
+					rel='icon'
+					type='image/png'
+					sizes='16x16'
+					href='/favicon-16x16.png'
+				/>
+				<link
+					rel='apple-touch-icon'
+					sizes='180x180'
+					href='/apple-touch-icon.png'
+				/>
+				<link rel='manifest' href='./site.webmanifest' />
 			</head>
 			<body className={`bg-[#F1F2F6] overflow-x-hidden`}>
 				<ScrollToTop />
